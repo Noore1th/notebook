@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson56/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>56多列布局</title>
+    
+    <title>实现两列布局</title>
+    <style type="text/css">
+        /* 不使用float实现两列布局 */
+        div.two {
+            column-count: 2;
+            column-gap: 20px;
+            column-rule: black solid 5px;
+        }
+
+        div.left {
+            background-color: pink;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        div.right {
+            background-color: lightblue;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>两列布局演示</h1>
+    <div class="two">
+        <div class="left">
+            <h2>左侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+        <div class="right">
+            <h2>右侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+        </div>
+    </div>
+
+</body></html>

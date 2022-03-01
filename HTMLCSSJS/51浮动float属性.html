@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson51/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>51浮动float属性</title>
+<title>实现多列布局</title>
+<style type="text/css">
+        div.left {
+            background-color: pink;
+            width: 50%;
+            display: inline-block;
+        }
+
+        div.right {
+            background-color: lightblue;
+            width: 50%;
+            display: inline-block;
+        }
+        div.f_left {
+            background-color: pink;
+            width: 50%;
+            float: left;
+        }
+
+        div.f_right {
+            background-color: lightblue;
+            width: 50%;
+            display: inline-block;
+            float:right;
+        }
+
+    </style>
+
+    
+    <title>float属性最正儿八经的用法</title>
+    <style type="text/css">
+        img {
+            width: 200px;
+            float: right;
+        }
+    </style>
+
+
+<title>一些神奇的现象</title>
+<style type="text/css">
+        div.pink {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+
+        div.lightblue {
+            background-color: lightblue;
+            width: 200px;
+            height: 100px;  
+            float: left;   
+        }
+
+        div.cornsilk {
+            background-color: cornsilk;
+            width: 300px;
+            height: 100px;
+
+        }
+
+        div.seagreen {
+            background-color: seagreen;
+            width: 400px;
+            height: 100px;
+        }
+
+
+    </style>
+
+    <title>float会改变显示样式</title>
+    <style type="text/css">
+        span {
+            width: 200px;
+            margin: 100px;
+            padding: 100px;
+            background-color: pink;
+            border: 5px solid lightblue;
+            float: left;
+        }
+
+    </style>
+
+    <style>
+        h1{
+            clear: left;
+        }
+    </style>
+
+    
+
+    
+</head>
+<body>
+
+<h1>用display：inline-block实现</h1>    
+<div class="left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse nulla molestiae eum, mollitia dolor repudiandae nobis ullam vero ipsum provident inventore reprehenderit. Molestiae cumque soluta tempore minus ad inventore dolore?</div><div class="right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis nobis aliquid reiciendis alias sit cupiditate? Commodi, facere cupiditate optio corrupti autem obcaecati, quod magni, nulla repudiandae distinctio assumenda at! Explicabo?</div>
+
+<h1><a href="https://man.ilovefishc.com/pageCSS3/float.html#属性值" target="_blank">用float实现</a></h1>
+
+<div class="f_left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse nulla molestiae eum, mollitia dolor repudiandae nobis ullam vero ipsum provident inventore reprehenderit. Molestiae cumque soluta tempore minus ad inventore dolore?</div><div class="f_right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis nobis aliquid reiciendis alias sit cupiditate? Commodi, facere cupiditate optio corrupti autem obcaecati, quod magni, nulla repudiandae distinctio assumenda at! Explicabo?</div>
+
+
+<h1>图片相对文字浮动</h1>
+
+<img src="../表情包/conan.gif" alt="conan">
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio deleniti officiis assumenda alias voluptatibus, modi eaque id molestias dicta aspernatur vitae ex? Inventore nulla dicta ab reprehenderit exercitationem magni veritatis odit. Earum consequuntur voluptatem culpa sequi aliquam quam? Consectetur dolorem in ullam nam nesciunt. Dicta, saepe dolore mollitia corrupti labore totam est vero id aliquid quasi vitae iste ipsa, dignissimos corporis doloremque quod rerum minus consequatur cupiditate. Fugit iste illum ea ipsam veniam eos iure dolor nulla, odio rerum libero unde dignissimos, perspiciatis maxime! Quaerat assumenda asperiores commodi, labore consequatur veritatis, suscipit neque at fugiat dolorum, non ab esse!</div>
+
+
+<h1>浮动元素会脱离正常文档流</h1>
+<h1 di="跳转">压盖块，环绕文本/其他行内元素</h1>
+
+
+<div class="pink"></div>
+<div class="lightblue"></div>
+<div class="cornsilk">I love FishC.com!</div>
+<div class="seagreen"></div>
+
+<h1>除了inline-table,其他添加float属性后都会变成block块</h1>
+<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse nulla molestiae eum, mollitia dolor repudiandae nobis ullam vero ipsum provident inventore reprehenderit. Molestiae cumque soluta tempore minus ad inventore dolore?</span>
+
+
+
+</body></html>

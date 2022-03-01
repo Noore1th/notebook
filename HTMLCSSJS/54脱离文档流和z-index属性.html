@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson54/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>54脱离文档流和z-index属性</title>
+
+<style type="text/css">
+    a{
+        font-size: 22px;
+    }
+    dl{
+        color:darkgreen;
+    }
+    #margin{
+        font-size: 22px;;       
+    }
+
+</style>
+
+<title>重叠的乱象</title>
+<style type="text/css">
+        #sit {
+            top: 20px;
+            left: 320px;
+            width: 200px;
+            position: absolute;
+            background-color: pink;
+        
+        }
+
+        #ikkyu {
+            top: 30px;
+            left: 330px;
+            width: 200px;
+            position: absolute;
+            background-color: lightblue;
+            
+       
+        }
+
+        #tennis {
+            top: 40px;
+            left: 340px;
+            width: 200px;
+            position: absolute;
+            background-color: cornsilk;
+        }
+        #sit1 {
+            top: 20px;
+            left: 620px;
+            width: 200px;
+            position: absolute;
+            background-color: pink;
+        
+        }
+
+        #ikkyu1 {
+            top: 30px;
+            left: 630px;
+            width: 200px;
+            position: absolute;
+            background-color: lightblue;
+            z-index: 1;
+            
+       
+        }
+
+        #tennis1 {
+            top: 40px;
+            left: 640px;
+            width: 200px;
+            position: absolute;
+            background-color: cornsilk;
+        }
+    </style>
+
+    <title>小技巧</title>
+    <style type="text/css">
+        /* 小技巧复刻 */
+        div#top{
+                position:sticky;
+                top:0;
+                z-index: 5;
+            }
+        a#top{
+            display: block;
+            background-color:darkblue;
+            color: white;
+            text-align: center;
+        
+        }
+
+
+
+        article {
+            max-width: 600px;
+            margin: 1em auto;
+        }       
+        section h4{
+            margin: 2em 0 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position:sticky;
+            top:0;
+            z-index: 1;
+            }
+      
+        section footer {
+            position:sticky;
+            background-color: #f0f3f9;
+            padding: 10px;
+            bottom: 50vh; 
+            z-index: -1;
+            
+        }
+
+        section content {
+            display: block;
+            background-color: #ffffe0;
+            position: relative;
+            padding: 1px 10px;
+
+        }
+
+
+
+        .pink {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        
+        }
+
+        
+        .lightblue {
+            width: 400px;
+            height: 100px;
+            position: sticky;
+            bottom: 20%;
+            z-index: -1;
+            background-color:lightblue;
+        }
+
+
+    </style>
+
+
+
+    <title>实现三列布局</title>
+    <style type="text/css">
+        /* 利用position实现三列布局 */
+        .main {
+            position: relative;
+        }
+
+        .left {
+            background-color: pink;
+            width: 33.33%;
+            position: absolute;
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .middle {
+            background-color: cornsilk;
+            width: 33.33%;
+            position: absolute;
+            left: 33.33%;
+            padding: 20px;
+            box-sizing: border-box;
+        }        
+
+        .right {
+            background-color: lightblue;
+            width: 33.33%;
+            position: absolute;
+            left: 66.66%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <h1>重叠的乱象</h1>
+    <a href="https://man.ilovefishc.com/pageCSS3/position.html#属性值" target="_blank">positions的属性值</a>
+    <ol>
+        <li>absolute固定了图片的位置</li>
+        <img id="sit" src="../表情包/sit.gif" ,="" alt="sit">
+        <img id="ikkyu" src="../表情包/ikkyu.gif" ,="" alt="ikkyu">
+        <img id="tennis" src="../表情包/tennis.gif" ,="" alt="tennis">
+
+        <img id="sit1" src="../表情包/sit.gif" ,="" alt="sit">
+        <img id="ikkyu1" src="../表情包/ikkyu.gif" ,="" alt="ikkyu">
+        <img id="tennis1" src="../表情包/tennis.gif" ,="" alt="tennis">
+
+        <dl>解决办法：
+            <dd>用z-index属性前置</dd>
+        </dl>
+
+    </ol>
+
+
+    <a href="https://www.zhangxinxu.com/wordpress/2018/12/css-position-sticky/?shrink=1" target="_blank">富有层次的滚动交互</a>
+
+    <ol>案例复盘总结：
+        <li>设置"标题h4"和"评论footer"的位置属性为"sticky"，一个在顶部，top属性值为0，一个在视窗中间以上活动，bottom属性为<a href="https://blog.csdn.net/ZNYSYS520/article/details/76053961">50vh</a></li>
+        <li>把文章的段落p用content包起来，用display属性转化为块，保证内容按顺序堆叠（因为排在后面的footer设置了位置属性，已经转变成块了）</li>
+        <li>三者的前后关系用1和-1来标记</li>
+        <li>把每一个组用section包起来，保证在后面的footer不会把前面的压盖</li>
+    </ol>
+
+
+
+    <article>
+
+        <section>
+        <h4>完形填空</h4>
+        <content>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+        </content>
+  
+
+        <footer>我曾经看过山和大海</footer>
+
+        </section>
+
+        <section>
+    
+        <h4>阅读理解</h4>
+    
+        <content>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+        </content>
+    
+        <footer>也看过人山人海</footer>
+
+        </section>
+
+
+        <section>
+    
+    
+        <h4>书信写作</h4>
+    
+        <content>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+        </content>
+
+        <footer>我曾经拥有着的一切</footer>
+
+        </section>
+   
+    </article>
+
+
+
+
+    <section>
+    <div class="pink">1</div>
+    <div class="lightblue">1</div>
+    </section>
+
+    <section>
+    <div class="pink">2</div>
+    <div class="lightblue">2</div>
+    </section>
+
+    <section>
+    <div class="pink">3</div>
+    <div class="lightblue">3</div>
+    </section>
+
+
+
+    <h1>三列布局演示</h1>
+    <div class="main">
+        <div class="left">
+            <h2>左侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+        <div class="middle">
+            <h2>中间列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
+        </div>
+        <div class="right">
+            <h2>右侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+    </div>
+    
+
+
+    
+
+
+
+
+</body></html>

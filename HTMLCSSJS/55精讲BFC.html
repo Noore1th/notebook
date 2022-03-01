@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson55/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>55精讲BFC</title>
+
+<style type="text/css">
+    a{
+        font-size: 22px;
+    }
+    dl{
+        color:darkgreen;
+
+    }
+
+
+    #margin{
+        font-size: 22px;;       
+    }
+
+</style>
+
+<title>BFC的对齐方式</title>
+
+<style type="text/css">
+        .container {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        #one {
+            width: 400px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        #two {
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        #three {
+            width: 550px;
+            height: 100px;
+            background-color: cornsilk;
+        }
+</style>
+
+<title>margin塌陷</title>
+    <style type="text/css">
+        .container2 {
+            background-color: pink;
+            overflow: hidden;
+        }
+
+        .newBFC {
+            overflow: hidden;
+        }
+
+        p {
+            background-color: lightblue;
+            margin: 10px 0;
+        }
+    </style>
+
+ 
+    <style type="text/css">
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            display: inline-block;
+       
+
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin-top: 50px;
+        }
+        .box00{
+            width: 300px;
+            height: 300px;
+            background:lightgreen;
+            overflow:hidden;
+            float: right;
+            display: inline-block;        
+
+                   
+
+        }
+        .box11 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            overflow:hidden;
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+
+        .box22 {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            border:10px double black;
+            box-shadow: -60px -60px 50px gray;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    </style>
+
+<title>容纳浮动元素</title>
+    <style type="text/css">
+        .container5 {
+            background-color: pink;
+            float: left;
+            
+        }
+        .container55 {
+            background-color: pink;
+            
+        }
+
+        .container555 {
+            background-color: pink;
+            overflow: hidden;
+            
+        }
+        .clear{
+            clear:both;
+        }
+
+
+        p.p5 {
+            float: left;
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        p.p55 {
+            float: left;
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+        p.p555 {
+            float: left;
+            background-color: lightblue;
+            margin: 5px;
+        }
+
+
+    </style>
+
+    <title>阻止文本环绕</title>
+    <style type="text/css">
+        img {
+            width: 200px;
+            float: left;
+        }
+
+        div {
+            overflow: hidden;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <h1>BFC的对齐方式</h1>
+    <ol>
+        <a href="https://blog.csdn.net/sinat_36422236/article/details/88763187" target="_blank" >什么是BFC？</a>
+        <li>BFC（Block Formatting Context ）-规范块级元素渲染规则</li>
+
+        <dl>
+            <dt>满足下面条件就会自动创建一个新的BFC：</dt>
+            <dd>float属性的值不为none</dd>
+            <dd>position的属性值不为static或relative</dd>
+            <dd>overflow属性的值不为visible</dd>
+            <dd>display属性的值不为flex，inline-flex,inline-block,table-caption</dd>
+        </dl>
+
+
+        <li>BFC内部的Box从上至下排列</li>
+        <div class="container">
+            <div id="one"></div>
+            <div id="two"></div>
+            <div id="three"></div>
+        </div>
+    </ol>
+    <h1>margin塌陷</h1>
+
+    <ol>
+
+
+        <li value="3">Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。</li>
+
+        <div class="container2">
+            <p>I love FishC</p>
+            <p>I love FishC</p>
+        </div>
+
+        <dl>塌陷的解决方式:
+            <dd>1，不在同等级的BFC内部排列Box,而是把Box独立到当前BFC排列的外部</dd>
+            <dd>2，触发条件：overflow属性的值不为visible</dd>
+
+        </dl>
+          
+        <div class="container2">
+            <p>I love FishC</p>
+            <div class="newBFC"><p>I love FishC</p></div>
+        </div>
+
+        <a href="https://man.ilovefishc.com/pageCSS3/overflow.html#属性值" target="_blank">overflow解释</a>
+        <li>设置的Margin表现在外部(默认嵌套块的规则是content内容完全对齐)</li>
+
+        <dl>解决办法：
+            <dd>1,触发生成新的BFC</dd>
+            <dd>2,BFC之间的规则是<span id="margin" >margin对齐</span></dd>
+            <dd>3,使用hidden后，box-shadow自动裁切</dd>
+        </dl>
+
+    </ol>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div><div class="box00">
+        <div class="box11">
+            <div class="box22"></div>
+        </div>
+    </div>
+
+    <h1>容纳浮动元素</h1>
+    <ol>
+        <li value="5">设置了float的p，变成了浮动元素，脱离了文档流，外面的div包裹的内容为空</li>
+
+
+    </ol>
+    
+    <dl>解决办法1：
+        <dd>把外面的div也变成浮动</dd>
+    </dl>
+
+    <div class="container5">
+        <p class="p5">I love FishC</p>
+        <p class="p5">I love FishC</p>
+    </div>
+
+    <div style="visibility:hidden">换行</div>
+
+
+    <dl>解决办法2：
+        <dd>用clear的both清除两边的浮动<a href="https://man.ilovefishc.com/pageCSS3/clear.html#属性值" target="_blank">(clear的属性解释)</a></dd>
+    </dl>
+
+    <div class="container55">
+        <p class="p55">I love FishC</p>
+        <p class="p55">I love FishC</p>
+        <div class="clear"></div>
+    </div>
+
+    <dl>解决办法3：
+        <dd>触发生成新的BFC,规则依旧是<a href="#margin">margin对齐</a></dd>
+        
+    </dl>
+
+    <div class="container555">
+        <p class="p555">I love FishC</p>
+        <p class="p555">I love FishC</p>
+
+    </div>
+
+
+    <h1>阻止文本环绕</h1>
+    <ol>
+        <li value="6">缩放效果为整列挤压，而不再是行内挤压</li>
+    </ol>
+    <img src="../表情包/conan.gif" alt="conan">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio deleniti officiis assumenda alias voluptatibus, modi eaque id molestias dicta aspernatur vitae ex? Inventore nulla dicta ab reprehenderit exercitationem magni veritatis odit. Earum consequuntur voluptatem culpa sequi aliquam quam? Consectetur dolorem in ullam nam nesciunt. Dicta, saepe dolore mollitia corrupti labore totam est vero id aliquid quasi vitae iste ipsa, dignissimos corporis doloremque quod rerum minus consequatur cupiditate. Fugit iste illum ea ipsam veniam eos iure dolor nulla, odio rerum libero unde dignissimos, perspiciatis maxime! Quaerat assumenda asperiores commodi, labore consequatur veritatis, suscipit neque at fugiat dolorum, non ab esse!</div>
+
+
+
+
+
+
+        
+
+   
+    
+
+
+</body>
+
+
+</html>

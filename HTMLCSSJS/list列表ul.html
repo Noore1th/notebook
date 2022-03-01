@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>样式模仿</title>
+
+        <style>
+            td {
+                border:1px solid rgb(91, 34, 184);
+                padding:5px;
+            }
+            caption{
+                padding: 10px;
+            }
+
+            ul.a {list-style-type: square;}
+            ul.b {list-style-type: disc;}
+            ul.c {list-style-type: circle;}
+            ul.d {list-style-type: none;}
+
+            ul{
+                list-style-image: url("../图标样式/小叉图标1.jpg");
+            }
+
+            #sq li{
+                display: inline;
+            }
+
+            span{
+                display: list-item;
+            }
+                        
+
+
+        </style>
+
+    </head>
+    <body>
+        <ol type="A">
+            <li>饭后散步</li>
+                <ul>
+                    <li>听英语</li>
+                    <li>买酸奶</li>
+                    <li>丢垃圾</li>
+                </ul>
+            <li>洗澡</li>
+            <li>按时睡觉</li>       
+        </ol>
+
+        <ul class="a" id="sq"> 
+            <li>饭后散步</li>
+            <li>买酸奶</li>
+            <li>听英语</li>
+        </ul>
+
+        <ul class="b">
+            <li>饭后散步</li>
+            <li>买酸奶</li>
+            <li>听英语</li>
+        </ul>
+
+        <ul class="c">
+            <li>饭后散步</li>
+            <li>买酸奶</li>
+            <li>听英语</li>
+        </ul>
+
+        <dl>
+            <dt>怎么理解HTML</dt>
+            <dd>HTML5是Web中核心语言HTML的规范</dd>
+            <dd>用户使用任何手段进行网页浏览时看到的内容原本都是HTML格式的</dd>
+            <dd>在浏览器中通过一些技术处理将其转换成为了可识别的信息。</dd>
+
+        </dl>
+
+        <ul>
+            <span>饭后散步</span>
+            <span>买酸奶</span>
+            <span>听英语</span>
+        </ul>
+
+
+
+
+    </body>
+</html>
