@@ -60,6 +60,42 @@
     </style>
 
 
+<title>实现三列布局</title>
+<style type="text/css">
+    /* 利用position实现三列布局 */
+    .main {
+        position: relative;
+    }
+
+    .p_left {
+        background-color: pink;
+        width: 33.33%;
+        position: absolute;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .p_middle {
+        background-color: cornsilk;
+        width: 33.33%;
+        position: absolute;
+        left: 33.33%;
+        padding: 20px;
+        box-sizing: border-box;
+    }        
+
+    .p_right {
+        background-color: lightblue;
+        width: 33.33%;
+        position: absolute;
+        left: 66.66%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+</style>
+
+
 
 </head>
 <body>
@@ -78,7 +114,7 @@
 
 
 
-    <h1>三列布局演示</h1>
+    <h1>float三列布局演示</h1>
     <div class="left1">
         <h2>左侧列巴拉巴拉</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
@@ -97,4 +133,20 @@
     <a href="http://127.0.0.1:5500/HTMLCSSJS/51%E6%B5%AE%E5%8A%A8float%E5%B1%9E%E6%80%A7.html#跳转" target="_blank">看看51中的浮动，被清除是什么效果</a>
     <footer>Copyright © 2020 FishC.com.cn All rights reserved.</footer>
 
+
+    <h1>position三列布局演示</h1>
+    <div class="main">
+        <div class="p_left">
+            <h2>左侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+        <div class="p_middle">
+            <h2>中间列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
+        </div>
+        <div class="p_right">
+            <h2>右侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+    </div>
 </body></html>
