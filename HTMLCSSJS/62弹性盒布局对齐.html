@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson62/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>62弹性盒布局对齐</title>
+    <style type="text/css">
+        /* 没有CSS的代码是缺少灵魂的 */
+        * {
+            outline: 1px dotted #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        body, nav, main, article {
+            display: flex;
+            flex-flow: row wrap;
+
+ 
+        }
+
+
+        body, article {
+            flex-direction: column;
+            
+        }
+
+        img,p{
+            margin: 0 auto;
+
+            width: 200px;
+        }
+
+        img{
+            background-color: darkgreen;
+
+        }
+
+
+        a:hover {
+            color: lightblue;
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <header><h2><a href="http://127.0.0.1:5500/HTMLCSSJS/61%E5%BC%B9%E6%80%A7%E7%9B%92%E5%B8%83%E5%B1%80.html">弹性盒布局对齐</a></h2></header>
+    <nav>
+        <a href="https://ilovefishc.com/html5/css3/lesson62/test1/index.html#">主页</a>
+        <a href="https://ilovefishc.com/" target="_blank">视频</a>
+        <a href="https://fishc.com.cn/" target="_blank">论坛</a>
+        <a href="https://man.ilovefishc.com/" target="_blank">宝典</a>
+        <a href="https://fishc.taobao.com/" target="_blank">起飞</a>
+    </nav>
+    <main>
+        <article>
+            <img src="./小甲鱼的部落格_files/Doraemon.gif" alt="Doraemon">
+            <p>除了最里层，其余都是弹性盒</p>
+        </article>
+        <article>
+            <img src="./小甲鱼的部落格_files/SailorMoon.gif" alt="SailorMoon">
+            <p>纵横嵌套：main和nav是默认的横向。整个body和article内，采用纵向排列。</p>
+        </article>
+        <article>
+            <img src="./小甲鱼的部落格_files/Popeye.gif" alt="Popeye">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptate illo provident repudiandae reprehenderit minima accusamus ratione iste, commodi suscipit?</p>
+        </article>        
+    </main>
+    <footer>Copyright © 2020, FishC.</footer>
+
+</body></html>

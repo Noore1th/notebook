@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson47/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>47设置元素尺寸和溢出</title>
+<style type="text/css">
+        /* 设置img元素的尺寸 */
+        img {
+            width: 50%;
+            min-width: 20px;
+            max-width: 500px;
+            padding: 20px;
+            border: 20px double pink;
+            box-sizing: border-box;
+
+            /*
+            box-sizing: padding-box;
+            box-sizing: margin-box;
+            box-sizing: content-box;
+            */
+        }
+
+        p{
+            max-width: 600px;
+            border: 20px solid #333;
+        }        
+        
+        p.overflow{
+            width: 600px;
+            height: 200px;
+            border: 5px solid #333;
+            overflow: auto;
+            resize: both;
+        }
+    </style>
+</head>
+<body>
+    <ol>设置元素的尺寸:
+        <li>box-sizing: border-box;</li>
+        <li>在不改变浏览器解析width和height值得条件下，</li>
+        <li>把边界框定义为box,使得其包含border和padding</li>
+        <li>设置max-width可以避免图片不正常拉升</li>
+        <li>设置max-width可以避免固定width下的溢出</li>
+    </ol>
+    <img src="../表情包/tennis.gif" alt="turtle">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nulla.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nulla.</p>
+
+    <ol><a href="https://man.ilovefishc.com/pageCSS3/overflow.html#属性值" target="_blank">使用overflow解决溢出：</a>
+        <li>auto:自适应，没有溢出就不加滚动</li>
+        <li>当overflow不为visible时，<a href="https://man.ilovefishc.com/pageCSS3/resize.html#属性值" target="_blank">触发resize</a></li>
+        <li></li>
+    </ol>
+
+
+    <p class="overflow">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nulla.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nullapisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nulla.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat alias soluta dolorem recusandae architecto ipsum neque quia aspernatur possimus iusto amet tenetur repudiandae sequi ipsa quam veniam, nisi aperiam. Nulla..</p>
+
+
+
+
+
+
+
+</body></html>

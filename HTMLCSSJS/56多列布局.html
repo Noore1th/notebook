@@ -8,9 +8,23 @@
     <style type="text/css">
         /* 不使用float实现两列布局 */
         div.two {
-            column-count: 2;
+            column-count:2;
             column-gap: 20px;
-            column-rule: black solid 5px;
+            column-rule: 5px solid black ;
+        }
+
+        div.three {
+            column-count:3;
+            column-gap: 20px;
+            column-width: 200px;
+
+        }
+
+
+        div.five {
+            columns:5 200px;
+
+
         }
 
         div.left {
@@ -24,10 +38,35 @@
             padding: 20px;
             box-sizing: border-box;
         }
+        h4{
+            column-span: all ;
+        }
+
+
+        .balance{
+            column-count: 3;
+            column-fill: balance;
+            background-color: pink;
+            height: 200px;
+        }
+
+        .auto{
+            column-count: 3;
+            column-fill: auto;
+            background-color: lightblue;
+            height: 200px;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>两列布局演示</h1>
+    <h2>columen-count指定列数</h2>
+    <h2>column-rule指定间隔元素的样式，类似border</h2>
+
+
+    
     <div class="two">
         <div class="left">
             <h2>左侧列巴拉巴拉</h2>
@@ -37,6 +76,35 @@
             <h2>右侧列巴拉巴拉</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
         </div>
+    </div>
+
+
+    <h2>column-width指定每一列允许的最小宽度</h2>
+    <h2>columns简写：指定列数和最小宽度</h2>
+    <h2>column-span指定可以横跨的元素</h2>
+
+    <div class="three">
+        <h4>右侧列巴拉巴拉</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+
+    </div>
+
+
+
+    <div class="five">
+        <h4>右侧列巴拉巴拉</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+
+    </div>
+
+
+    <div class="balance">
+        <h4>固定高度后，balance的填充会均匀分布</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+    </div>
+    <div class="auto">
+        <h4>固定高度后，auto会优先填充左侧</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
     </div>
 
 </body></html>

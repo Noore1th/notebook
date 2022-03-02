@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson57/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>居中演示</title>
+<style type="text/css">
+        .center {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            color: white;
+            background-color: #cb4042;
+            text-align: center;
+            margin:auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+          
+        }
+
+        span {
+            font-size: 20px;
+            line-height: 200px;
+        }
+
+        .container {
+         
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: #40cbc9;
+        }
+
+        dd{
+            display: list-item;
+        }
+    </style>
+
+<title>单列布局演示</title>
+<style type="text/css">
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /*
+
+        header,main,footer{
+            max-width: 800px;
+            margin: 0 auto;
+            
+        }
+        */
+
+        header {
+            height: 50px;
+            line-height: 50px;
+            background-color: pink;
+            text-align: center;
+     
+        }
+
+        main {
+            height: 200px;
+            line-height: 200px;
+            background-color: #333;
+            text-align: center;
+        
+        }
+
+        footer {
+            height: 50px;
+            line-height: 50px;
+            background-color: lightblue;
+            text-align: center;
+
+        }
+
+        div{
+            overflow:hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>“浮动、定位、内外边距”结合使用</h1>
+    <dl>实现span居中与div:
+        <dd>水平：div的text-align: center;</dd>
+        <dd>垂直：line-height高度等于div的高度</dd>
+    </dl>
+    <dl>实现div居中于整个页面：
+        <dd>水平：div的margin:auto;/置顶居中0,auto</dd>
+        <dd>垂直：div的position: absolute;然后设置top,right,bottom,left均为0</dd>
+    </dl>
+    <dl>实现div居中于盒子：
+        <dd>把放到盒子里</dd>
+        <dd>为什么盒子的位置并不总是生效？？？？？？？？？？</dd>
+    </dl>
+
+
+   
+    <div class="center"><span>页面内居中</span></div>
+    <div class="container"><div class="center"><span>盒子里居中</span></div></div>
+
+
+
+    <h1>单列布局</h1>
+
+    <header>头部</header>
+    <main>内容</main>
+    <footer>尾部</footer>
+
+
+    <h1>分开限制宽度</h1>
+    <dd>只有main的背景色拥有content的最大宽度限制</dd>
+    <dd>而header和footer的高度限制被放在了对div透明文本框的限制上</dd>
+    
+    <header>
+    <div class="content">头部Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, commodi in porro aspernatur similique obcaecati! Maiores consectetur obcaecati rerum amet aliquam, delectus reiciendis magni laborum consequuntur dolor asperiores neque cupiditate!</div>
+    </header>
+
+    <main class="content">内容</main>
+
+    <footer>
+    <div class="content">尾部Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, commodi in porro aspernatur similique obcaecati! Maiores consectetur obcaecati rerum amet aliquam, delectus reiciendis magni laborum consequuntur dolor asperiores neque cupiditate!</div>
+    </footer>
+
+    
+
+
+</body></html>

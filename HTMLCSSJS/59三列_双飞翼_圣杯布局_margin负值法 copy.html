@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson59/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>三列布局演示</title>
+<style type="text/css">
+    ol{
+        font-size: 20px;
+        
+    }
+    .container {
+        width: 100%;
+        float: left;
+    }
+    main{
+        overflow: hidden;
+
+    }
+
+    header,footer{
+        width: 100%;
+        height: 30px;
+        background-color: chartreuse;
+   
+        
+    }
+
+    .center {
+        height: 500px;
+        margin: 0 200px;
+        background-color: #333;
+    }
+
+    .left {
+        width: 200px;
+        height: 500px;
+        float: left;
+        margin-left:-100%;
+        background-color: pink;
+    }
+
+    .right {
+        width: 200px;
+        height: 500px;
+        float: left;
+        margin-left: -200px;
+        background-color: lightblue;
+    }
+</style>
+
+<style type="text/css">
+
+    div.main{
+        padding:0 200px;
+        overflow: hidden;
+
+    }
+
+
+
+    .center1 {
+        height: 500px;
+        width: 100%;
+        float: left;
+        background-color: #333;
+    }
+
+    .left1 {
+        width: 200px;
+        height: 500px;
+        float: left;
+        margin-left: -100%;
+        position:relative;
+        right: 200px;
+        background-color: pink;
+    }
+
+    .right1 {
+        width: 200px;
+        height: 500px;
+        float: left; 
+        margin-right: -200px;
+        background-color: lightblue;
+    }
+
+    
+</style>
+</head>
+<body>
+
+    <h1>三列+头尾=双飞翼</h1>
+  
+    <ol>margin负值法（用于布局主体占据整行，浮动元素被挤下来）
+        <li>center部分嵌套在一个100%的box里</li>
+        <li>margin-left:-100%(实现往回退一行)</li>
+        <li>-200px(往回退200px)</li>
+        
+        <li>main用于加头尾时把主体脱离文档流</li>
+     
+    </ol>
+
+
+
+    <header></header>
+        <main>
+        <div class="container">
+            <div class="center"></div>
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+ 
+        </main>
+    <footer></footer>
+
+    <h1>圣杯布局</h1>
+
+    <ol>三个元素放在一个文档流里，减少一层嵌套
+        <li>直接给main加上padding，中左右依次排列</li>
+        <li>粉色：往回退一行后再往左使用relative</li>
+        <li>蓝色：往回退一行后再往右使用relative</li>
+        <li>蓝色进阶：直接使用margin-right</li>
+    </ol>
+
+
+    <header></header>
+    <div class="main">  
+        <div class="center1"></div>
+        <div class="left1"></div>
+        <div class="right1"></div>
+    </div>
+    <footer></footer>
+
+
+
+
+    
+
+</body></html>

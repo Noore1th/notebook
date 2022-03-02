@@ -147,39 +147,23 @@
 
 
 
-    <title>实现三列布局</title>
+
+
     <style type="text/css">
-        /* 利用position实现三列布局 */
-        .main {
-            position: relative;
+        div.nav{
+            height: 200px;
+            margin-top: 50px;
+            border: solid deepskyblue;
+        }
+        nav{
+            position: sticky;
+            top:20px;
+            background: lightblue;
         }
 
-        .left {
-            background-color: pink;
-            width: 33.33%;
-            position: absolute;
-            left: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
 
-        .middle {
-            background-color: cornsilk;
-            width: 33.33%;
-            position: absolute;
-            left: 33.33%;
-            padding: 20px;
-            box-sizing: border-box;
-        }        
 
-        .right {
-            background-color: lightblue;
-            width: 33.33%;
-            position: absolute;
-            left: 66.66%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+
     </style>
 
 
@@ -217,8 +201,24 @@
         <li>把每一个组用section包起来，保证在后面的footer不会把前面的压盖</li>
     </ol>
 
+    <a href="https://www.zhangxinxu.com/wordpress/2020/03/position-sticky-rules/" target="_blank">深入理解粘性定位的计算规则</a>
+
+    <ol>理解：
+        <li>sticky如果是相对浏览器视窗，可以保证粘黏效果成功触发</li>
+        <li>如果把粘黏元素嵌套在固定大小的div里，则跟着div活动，直到触碰到粘黏条件开始发生粘黏，并在div在离开触发边界时跟着划走</li>
+
+    </ol>
 
 
+    <h1>盒流和定位盒的交集</h1>
+
+
+    <div class="nav">
+        <nav>导航</nav>
+    </div>
+
+
+    <h1>先后顺序和分块组合</h1>
     <article>
 
         <section>
@@ -283,21 +283,9 @@
 
 
 
-    <h1>三列布局演示</h1>
-    <div class="main">
-        <div class="left">
-            <h2>左侧列巴拉巴拉</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
-        </div>
-        <div class="middle">
-            <h2>中间列巴拉巴拉</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
-        </div>
-        <div class="right">
-            <h2>右侧列巴拉巴拉</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
-        </div>
-    </div>
+    
+
+
     
 
 

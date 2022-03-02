@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson48/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>元素的轮廓</title>
+<style type="text/css">
+        p {
+            width: 10em;
+            margin: 100px auto;
+            padding: 20px;
+            border: 5px solid #333;
+            border-top-left-radius: 5px 30px;
+            border-top-right-radius: 30px 60px;
+            border-bottom-left-radius: 80px 40px;
+            border-bottom-right-radius: 60px 100px;
+            box-shadow: 0 0 0 10px #248f8f,
+                        0 0 0 20px #2eb8b8,
+                        0 0 0 30px #47d1d1,
+                        0 0 0 40px #70dbdb;
+            outline: 20px solid #333;
+            outline-offset: 50px;
+        }
+        .box1{
+            width: 400px;
+            height: 200px;
+            padding: 5px;
+            display: grid;
+            grid-template-columns:1fr 3fr ;
+            margin:100px auto;                     
+            border: 5px double black;
+            border-radius: 20px;
+            outline: 5px solid #333;
+        }
+        .box1 > div{
+            text-align: center;
+            padding: 10px;
+            border: 1px solid white;
+            background-color: darkgreen;
+        }
+
+
+        input,label{
+            display: block;
+            padding:10px;
+            margin: 30px auto;
+
+        }
+
+        input{
+            width: 240px;
+        }
+
+        input:invalid{
+            outline: 4px solid lightgreen;
+            outline-offset: 1px;
+        }
+
+        div.shadow{
+            width: 400px;
+            height: 200px;
+            padding: 5px;
+            margin:50px auto;
+            box-shadow: 0 4px 8px #bcbcbc;                             
+        }
+
+        div.shadow1{
+            width: 400px;
+            height: 200px;
+            padding: 5px;
+            margin:50px auto;
+            box-shadow: 0 0 8px 8px #bcbcbc ,0 0 8px 8px black inset;                             
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <ol>轮廓：
+        <li>轮廓不属于盒子，样式会覆盖</li>
+        <li>常用于交互，提示用户在提交表单漏填的元素</li>
+        <li>相于用边框实现，这种方式不会改变原有布局)</li>
+        <li>outline-offset用于设置往里的距离</li>
+        <li>outline可以跟随border的弧度</li>
+    </ol>
+<p>世界这么大还是遇见你</p>
+
+
+<div class="box1">
+    <div>
+        <label>邮箱：</label>
+        <label>密码：</label>
+
+    </div>
+    <div>
+       <input type="text" required>
+        <input type="text" required>
+      
+    </div> 
+</div>
+
+<ol>阴影：
+    <li ><a href="https://man.ilovefishc.com/pageCSS3/box-shadow.html#属性值" target="_blank">box-shadow的属性值:</a></li>
+    <li>正=右，正=下(设置0 0表示不偏移 ，边界依旧可以依靠模糊值显示)</li>
+    <li>模糊值越大，边界越模糊</li>
+    <li>延伸半径值跟在模糊度后面</li>
+    <li>inset 变成内部阴影</li>
+    <li>逗号可以分割叠加多个阴影效果</li>
+    <li>阴影与边框的弧度一致</li>
+
+</ol>
+
+<div class="shadow"></div>
+
+<div class="shadow1"></div>
+
+
+
+
+</body></html>
+
