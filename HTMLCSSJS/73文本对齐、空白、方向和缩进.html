@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson73/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>设置文本对齐</title>
+    <style type="text/css">
+        p {
+            color: blueviolet;
+            background-color: #bcbcbc;
+        }
+
+        .start {
+            text-align: start;
+        }
+
+        .end {
+            text-align: end;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+
+        .whitespace{
+            white-space: pre-wrap;
+            direction:rtl;
+
+        }
+        .unicode-bidi{
+            white-space: pre-wrap;
+            direction:rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .writing-mode{
+            white-space: pre-wrap;
+            writing-mode: vertical-rl ;
+            float:right;
+            margin: 20px;
+        }
+        .text-indent{
+            white-space: pre-wrap;
+            text-indent: 2em;
+            clear:both;
+        }
+        .p1{
+            white-space: pre-wrap;
+            letter-spacing:2em ;
+            line-height: 2;
+            
+        }
+    </style>
+</head>
+<body>
+    <p class="start">start</p>
+    <p class="end">end</p>
+    <p class="left">left</p>
+    <p class="right">right</p>
+    <p class="center">center</p>
+    <p class="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, nulla quia. Enim nihil velit fugit neque, itaque vel repudiandae illo rerum voluptatem maiores mollitia dolorem molestias inventore repellendus illum? Ratione.</p>
+
+    <p class="whitespace">
+        使用white-space: pre-wrap;实现换行还原显示
+        使用direction:trl;定义文本停靠方向
+        Lorem ipsum dolorsit amet consectetur adipisicing elit.
+        Odio, nulla quia. 
+        Enim nihil velit fugit neque,
+        itaque vel repudiandae 
+        illo rerum voluptatem maiores
+        mollitia dolorem molestias inventore repellendus illum? Ratione.
+    </p>
+
+    <p class="unicode-bidi">
+        加上unicode-bidi: bidi-override;实现文字调序。
+        我要一步一步往上爬，
+        在最高点看着天空往前飞
+    </p>
+
+    <p class="writing-mode">
+        writing-mode设置文本书写方向
+        小小的天
+        有大大的梦想
+        种种的壳裹着轻轻的仰望
+    </p>
+\
+
+    <p class="text-indent">
+        使用text-indent: 2em;设置文本缩进。
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quidem? Temporibus, minus accusamus sequi minima sunt dolor deserunt similique neque adipisci asperiores quae consequuntur, expedita, veritatis velit tenetur obcaecati dolorem?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quidem? Temporibus, minus accusamus sequi minima sunt dolor deserunt similique neque adipisci asperiores quae consequuntur, expedita, veritatis velit tenetur obcaecati dolorem?
+    </p>
+
+
+    <p class="p1">
+        letter-spacing:2em ;两个字符
+        line-height: 2;两倍字符
+        
+        纵有千古，横有八荒；
+        前途似海，来日方长。
+
+    </p>
+
+</body></html>

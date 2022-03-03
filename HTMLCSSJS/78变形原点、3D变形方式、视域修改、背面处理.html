@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson78/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>修改变形原点</title>
+    <style type="text/css">
+        div.perspective {
+            padding: 50px;
+            transition: 2s;
+
+        }
+
+        .left_top {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            transition: 2s;
+            color: white;
+            background-color: lightblue;
+            transform-origin: left top;
+        }
+        
+        .right_bottom {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            transition: 2s;
+            color: white;
+            background-color: lightblue;
+            transform-origin: right bottom;
+        }
+
+        .left_top:hover {
+            background-color: pink;
+            transition: 2s;   
+            transform: rotate(45deg);
+        }
+
+        .right_bottom:hover {
+            background-color: pink;
+            transition: 2s;   
+            transform: rotate(45deg);
+        }
+
+        #pink{
+            background-color: pink;
+            transform-style: preserve-3d;
+        }
+
+        #lightblue{
+            background-color: lightblue;
+        }
+
+        #pink:hover{
+            transform:perspective(2000px) rotateY(45deg);
+        }        
+        #lightblue:hover{
+            transform:perspective(2000px) rotateY(-45deg);
+        }
+
+        div.perspective2 {
+            width:300px;
+            height: 100px;
+
+        }
+
+        img{
+            width: 100px;
+        }
+
+        #one img{
+            transform: perspective(200px) rotateX(50deg);
+        }        
+        #two{
+            perspective: 200px;
+            perspective-origin: right top;
+        }
+
+        #two img{
+            transform:rotateX(50deg);
+        }
+
+
+
+        div.back{
+            display: inline-block;
+            width:200px;
+            height:200px;
+            margin: 20px;
+            background-color: lightblue;
+            transition: 2s;
+        }
+
+        #yes:hover{
+            transform: rotateY(180deg);
+        }
+
+        #no:hover{
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }        
+    </style>
+
+    <style type="text/CSS">
+
+
+        #example{
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            transform: rotate3d(1, 1, 1, 30deg);          
+        }
+
+        #example:hover{
+            transform: rotate3d(1, 1, 1, 1700deg);
+            transition: 10s 1s;
+            transition-timing-function:cubic-bezier(0,1.95,1,-1.05);
+
+            /*
+            transition-timing-function: steps(30,start);
+            */
+           
+            
+
+
+
+        }
+
+        .cubic{
+            height: 100px;
+            width:100px;
+            opacity: 0.7;
+            position: absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #fff;
+            backface-visibility: inherit;
+        }
+
+
+
+
+        #front{
+            background-color: red;
+            transform: translateZ(50px);
+        
+        }        
+        #back{
+            background-color: orange;
+            transform: rotateY(180deg) translateZ(50px);
+
+        }
+        #right{
+            background-color: green;
+            transform: rotateY(90deg) translateZ(50px);
+        }       
+        #left{
+            background-color: yellow;
+            transform: rotateY(-90deg) translateZ(50px);
+        }              
+        #top{
+            background-color: blue;
+            transform: rotateX(90deg) translateZ(50px);
+            
+        }        
+        #bottom{
+            background-color: purple;
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <ol>transform-origin变形原点：
+        <li>默认以中心点位原点</li>
+        <li>上一节的旋转、移动、缩放、倾斜都可以自定义原点</li>
+        <li>使用left right top bottom 作为参数</li>
+        <li>使用数值作为参数，定义距离左上角的位置</li>
+        <li>使用百分比作为参数，定义距离左上角的长宽比</li>
+
+    </ol>
+
+
+    <div class="left_top">以左上角为原点</div>
+    <div class="right_bottom">以右下角为原点</div>
+
+    <ol>嵌套3D：
+        <li>默认子元素跟随父元素，忽略自身设置</li>
+        <li>通过设置父元素的transform-style: preserve-3d;实现嵌套3D</li>
+        <li>通过perspective设置视域，像素越小，透视越大(可以理解为焦距)</li>
+        
+       
+    </ol>
+    <div class="perspective" id="pink">1
+        <div class="perspective" id="lightblue">2</div>
+    </div>
+
+
+    <ol>视域：
+        <li>perspective作为函数，和它作为属性，效果是不一样的</li>
+        <li>作为属性时作用于整个box</li>
+        <li>支持通过perspective-orgin修改视域原点</li>
+        
+    </ol>
+
+    <div>
+        <img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif"></div>
+        <div class="perspective2" id="one"><img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif"></div>
+        <div class="perspective2" id="two"><img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif"><img src="../表情包/龟派气功.gif">
+    </div>
+
+
+    <ol>处理背面：
+        <li>使用backface-visibilety设置是否渲染背面</li>
+    </ol>
+
+    <div class="back" id="yes">我有背面</div>
+    <div class="back" id="no">我没有背面</div>
+
+    <ol>3D和透明度叠加使用形成立体效果:
+        <ol>第一步：得到六面体
+            <li>对面设置position: absolute;六个面叠加在一起,并设置透明度</li>
+            <li>设置容器在XYZ相同的旋转分量，并旋转一定角度，是的对六个面的位置操作可见。transform: rotate3d(1, 1, 1, 30deg);</li>
+            <li>使用transform-style: preserve-3d;允许子元素设置形变</li>
+            <li>使用rotate和translate旋转移动子元素，得到一个六面体</li>
+        </ol>
+
+
+        <ol>第二步：通过数字形变增强立体效果
+            <li>把面都设置成弹性盒，元素居中</li>
+            <li>为了实现和例子完全一样的效果，有的数字需要旋转，旋转后的偏移不再需要设置为负</li>
+            <li>不使用负偏移可以让文字保留在盒子的视觉外部</li>
+            <li>backface-visibility: inherit;设置一下背面可见度（没有看出效果）</li>
+
+        </ol>
+
+        <ol>第三部：设置悬停效果，实现旋转(支持step和贝塞尔曲线)
+        </ol>
+
+    </ol>
+
+    <section id="example">
+        <div class="cubic" id="front">1</div>
+        <div class="cubic" id="back">2</div>
+        <div class="cubic" id="right">3</div>
+        <div class="cubic" id="left">4</div>
+        <div class="cubic" id="top">5</div>
+        <div class="cubic" id="bottom">6</div>
+    </section>
+
+
+
+</body></html>
