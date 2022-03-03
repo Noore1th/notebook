@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson76/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>过渡</title>
+<style type="text/css">
+        p {
+            color: white;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        span {
+            transition:10s;
+
+            
+
+            /*
+            transition-duration: 1.5s;
+            transition-delay: 2s;
+            
+            */
+        }
+
+        span:hover {
+            background-color: pink;
+            font-size: 1.5em;
+            transition-duration: 1.5s;
+            transition-delay: 2s;
+
+        }
+
+
+        div{
+            width: 100px;
+            height: 50px;
+            margin-bottom: 20px;
+            background-color: #bcbcbc;
+            transition:2s;
+            
+        }
+
+        div:hover{
+            width: 500px;
+
+            /*
+            transition:2s,7s;
+            transition-property: width,height;
+            */
+        }
+
+        div#d1{
+            transition-timing-function: ease;
+        }       
+        div#d1{
+            transition-timing-function: linear;
+        }        
+        div#d1{
+            transition-timing-function: ease-in;
+        }        
+        div#d1{
+            transition-timing-function: ease-out;
+        }        
+        div#d1{
+            transition-timing-function: ease-in-out;
+        }
+        div#d6{
+            transition-timing-function:cubic-bezier(0,1.95,1,-1.05);
+        }        
+        div#d7{
+            transition-timing-function:steps(5,start);
+        }        
+        div#d8{
+            transition-timing-function:steps(5,end);
+        }
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <ol>过渡：
+        <li>transition-duration: 1.5s;指定过渡时间</li>
+        <li>transition-delay: 2s;指定延迟动画时间</li>
+        <li>以上两个属性可以对开始和回复分别设置</li>
+        <li>transition-property设置二维元素的x y 不同过渡速度</li>
+  
+    </ol>
+<p>过渡是什么？过渡就是使得原本“啪”一下就过来的效果，变得<span>丝滑</span>且<span>美好</span>。（把鼠标放“丝滑”上试一下吧）</p>
+
+
+    <div></div>
+
+    <div id="d1">ease</div>
+    <div id="d2">linear</div>
+    <div id="d3">ease-in</div>
+    <div id="d4">ease-out</div>
+    <div id="d5">ease-in-out</div>
+    <div id="d6">cubic-bezier</div>
+
+
+    <div id="d7">step1</div>
+    <div id="d8">step2</div>
+
+</body></html>

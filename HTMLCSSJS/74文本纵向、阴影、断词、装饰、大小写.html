@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson74/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>纵向对齐文本</title>
+<style type="text/css">
+        p {
+            background-color:beige;
+            font-size: 20px;
+            text-shadow: 2px 2px 3px #bcbcbc ;
+            width: 500px;
+            white-space: pre-wrap;
+
+
+        }
+        p.p1 {
+
+            word-break: break-all;
+
+        }
+        p.p2 {
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.p3{
+            text-decoration: underline 2px wavy #bcbcbc;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        p.p4{
+            text-transform: capitalize;
+        }
+
+
+
+
+        img {
+            width: 1em;
+        }
+        .top {
+            vertical-align: top;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <p>文本支持阴影添加</p>
+
+    <p>I love FishC.com<img class="top" src="../图标样式/小小小小龟.png" alt="turtle"> vertical-align: top;小小龟在上标位置</p>
+    <p>I love FishC.com <img class="middle" src="../图标样式/小小小小龟.png" alt="turtle">vertical-align: middle;小小龟在中间</p>
+    <p>I love FishC.com <img class="bottom" src="../图标样式/小小小小龟.png" alt="turtle">vertical-align: bottom;小小龟在下标位置</p>
+
+    <p class="p1">
+        一个单词超级长，来不及换行，溢出了怎么办？
+        当然是设置word-break: break-all;
+        dskjfaksdfjdjfhjhdjhfnkjdnskfakjfjjgirjgjffjmdnjfsajsnjfnjdnkjvnsjanvkjnfjvnjn</p>
+
+    <p class="p2">
+        当设置不允许换行时，怎么办?dskjfa ksdfjdjf hjhdjhfnk jdnskfakjf jjgi rjgj ffjmdnj fsajsnjfnjdnkjvnsjanvkjnfjvnjn</p>
+
+    <p> 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        三个条件缺一不可！！！
+    </p>
+
+    <p class="p3">text-decoration的属性值依次是：划线位置、厚度、线型、颜色<a href="www.baidu.com">和下划线的默认样式打架了怎么办？</a>设置a的属性text-decoration: none;打架的横线就没有啦！</p>
+
+    <p class="p4">text-transform转换大小写：Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ut illo aut, aperiam provident, omnis quae consequatur et laboriosam odit voluptatem autem voluptas, nisi fuga! Eos ad quis voluptatibus sint?</p>
+
+
+
+
+
+
+</body></html>
