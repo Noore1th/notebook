@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson81/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>变暗、正片叠底和颜色加深</title>
+<style type="text/css">
+        div {
+            display: inline-block;
+            
+        }        
+        div.container {
+            position: relative;
+            border: 20px solid black;
+            overflow: hidden;
+        }
+
+        div.container_for3 {
+            position: relative;
+            border: 2px solid black;
+            overflow: hidden;
+            
+        }
+
+
+
+        div.grid{
+            display: grid;
+            grid-template-columns: repeat(3,550px) repeat(2,500px);
+            grid-template-rows: 150px 550px;
+        }
+        div.grid_for3{
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            grid-template-rows:repeat(3,1fr);
+        }
+
+        div.grid_for4{
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            grid-template-rows:repeat(2,1fr);
+        }
+
+
+
+        #me{
+            position: absolute;
+            top:0px;
+        }
+        #me_3{
+            position: absolute;
+            top:0px;
+            left:-120px;
+        }   
+        
+        #sign1 {
+            position: absolute;
+            left: 290px;
+            top: 190px;
+            mix-blend-mode: darken;
+        }
+
+        #sign2 {
+            position: absolute;
+            left: 290px;
+            top: 290px;
+            mix-blend-mode: multiply;
+        }
+
+        #sign3 {
+            position: absolute;
+            left: 290px;
+            top: 390px;
+            mix-blend-mode: color-burn;
+        }
+
+     
+        
+        #sign11 {
+            position: absolute;
+            left: 290px;
+            top: 190px;
+            mix-blend-mode: lighten;
+        }
+
+        #sign22 {
+            position: absolute;
+            left: 290px;
+            top: 290px;
+            mix-blend-mode: screen;
+        }
+
+        #sign33 {
+            position: absolute;
+            left: 290px;
+            top: 390px;
+            mix-blend-mode: color-dodge;
+        }
+
+
+        #background1{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: overlay;
+
+        }
+        #background2{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: soft-light;
+
+        }
+        #background3{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: hard-light;
+
+        }        
+        #background4{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: difference;
+
+        }        
+        #background5{
+            position: absolute;
+            left: -50px;
+            top:0px;
+            mix-blend-mode: exclusion;
+
+        }
+        #background11{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: hue;
+
+        }
+        #background22{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode:saturation;
+
+        }
+        #background33{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode:luminosity;
+
+        }        
+        #background44{
+            position: absolute;
+            left: -120px;
+            top:0px;
+            mix-blend-mode: color;
+
+        }
+
+        div.mult-background{
+            position: relative;
+            border: 20px solid black;
+            overflow: hidden;
+            background-image: url("../图标样式/小甲鱼本人插画.png"),url("../背景样式/background.jpg");
+            background-blend-mode: difference;
+        }
+        
+        
+
+
+    </style>
+</head>
+<body>
+
+<div class="grid">
+
+<div>
+    <ol><a href="">background-blend-mode</a>
+        <li>在CSS里插入两个背景图片</li>
+        <li>设置背景合并模式，达到相同效果</li>
+
+    </ol>
+
+</div>
+
+<div>
+    <ol><a href="http://127.0.0.1:5501/HTMLCSSJS/mix-blend-mode-fromW3S.html" target="_blank">mix-blend-mode其他示例</a>
+        <li>darken:保留深色，舍弃亮色</li>
+        <li>multiply(正片叠底)：将基色和底色相乘，得到更深的颜色</li>
+        <li>color-burn：增加基色和底色的对比度，使得基色变暗，来反映混合色调</li>
+
+    </ol>
+
+</div>
+
+
+<div>
+    <ol>
+        <li>lighten:变亮</li>
+        <li>screen:滤色</li>
+        <li>color-dodge：颜色减淡</li>
+    </ol>
+
+</div>
+
+<div>
+    <ol>
+        <li>overlay:叠加</li>
+        <li>soft-light:柔光</li>
+        <li>hard-light:强光</li>
+        <li>difference:差值（两个相同的图片差值，会变成一片黑）</li>
+        <li>exclusion:排除</li>
+        <li>exclusion:排除(连个相同图片效果加强)</li>
+    </ol>
+
+</div>
+
+
+<div>
+    <ol>色彩型混合模式：
+        <li>hue色相:将上层"色相"+下层"明度和饱和度"</li>
+        <li>saturation饱和度：上层"饱和度"+下层"色相和明度"</li>
+        <li>luminosity明度:上层"明度"+下层"色相和饱和度"</li>
+        <li>ccolor:上层"色相和饱和度"+下层"明度"</li>
+        
+    </ol>
+
+
+
+</div>
+
+
+<div class="mult-background">   
+</div>
+    
+
+<div class="container">
+
+<div id="me"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div id="sign1"><img src="../图标样式/小甲鱼sign.png" alt="sign"></div>
+<div id="sign2"><img src="../图标样式/小甲鱼sign.png" alt="sign"></div>
+<div id="sign3"><img src="../图标样式/小甲鱼sign.png" alt="sign"></div>
+
+</div>
+
+<div class="container">
+<div id="me"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div id="sign11"><img src="../图标样式/小甲鱼signblack.png" alt="sign"></div>
+<div id="sign22"><img src="../图标样式/小甲鱼signblack.png" alt="sign"></div>
+<div id="sign33"><img src="../图标样式/小甲鱼signblack.png" alt="sign"></div>
+</div>
+
+<div class="grid_for3">
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background1"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background2"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background3"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background4"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background5"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>
+
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background5"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+    
+    </div>
+
+</div>
+
+    <div class="grid_for4">
+            <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background11"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background22"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background33"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+    <div class="container_for3">
+        <div id="me_3"><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+        <div id="background44"><img src="../背景样式/background.jpg" alt="sign"></div>
+    </div>    
+
+
+
+
+    </div>
+
+</div>
+
+</body></html>

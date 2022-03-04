@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson79/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>动画</title>
+<style type="text/css">
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top:0px;
+            }            
+            25% {
+                background-color: yellow;
+                left: 100px;
+                top:0px;
+            }            
+            50% {
+                background-color: green;
+                left: 100px;
+                top:100px;
+            }            
+            75% {
+                background-color: blue;
+                left: 0px;
+                top:100px;
+            }            
+            100% {
+                background-color: red;
+                left: 0px;
+                top:0px;
+            }
+
+
+            /*
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: green;
+            }
+            */
+        }
+
+        @keyframes basketball1 {
+
+            from {
+                transform: translateY(-100px);
+                animation-timing-function: ease-in;
+            }
+            to {
+                transform: translateY(110px);
+                animation-timing-function: ease-out;
+            }
+        
+        }        
+        
+        @keyframes basketball2 {
+            0% {
+                transform: translateY(-150px);
+                animation-timing-function: ease-in;
+            }
+
+            30% {
+                transform: translateY(-50px);
+                animation-timing-function: ease-in;
+            }
+
+            60% {
+                transform: translateY(0px);
+                animation-timing-function: ease-in;
+            }
+
+            80% {
+                transform: translateY(50px);
+                animation-timing-function: ease-in;
+            }
+            
+            95% {
+                transform: translateY(90px);
+                animation-timing-function: ease-in;
+            }
+            15%,45%,75%,90%, 100% {
+                transform: translateY(110px);
+                animation-timing-function: ease-out;
+            }
+        }
+        @keyframes basketball3{
+            
+
+            0% {
+                transform: translateY(-150px);
+                animation-timing-function: ease-in;
+            }
+                       
+            25% {
+                transform: translateY(-50px);
+                animation-timing-function: ease-in;
+            }            
+            50% {
+                transform: translateY(0px);
+                animation-timing-function: ease-in;
+            }            
+            75% {
+                transform: translateY(50px);
+                animation-timing-function: ease-in;
+            }            
+       
+            10%,35%,60%,95%,100%{
+                transform: translateY(110px);
+                animation-timing-function: ease-out;
+            }
+
+        
+        
+        }
+        div.grid{
+            display: grid;
+            width: 100%; 
+            padding: 30px;
+            grid-template-rows: repeat(3,200px);
+            grid-template-columns: repeat(3,200px);
+
+
+        }
+        div.container{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin:-1px;
+        }
+
+        div.cubic {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: example;
+            animation-delay: -4s;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate-reverse ;
+            animation-timing-function: ease-in-out;
+        }
+
+        img#ball1 {         
+            width: 100px;
+            position: relative;
+            left: 50px;
+            animation-name: basketball1;
+            animation-duration: 0.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            
+        }        
+        img#ball2 {         
+            width: 100px;
+            position: relative;
+            left: 50px;
+            animation-name: basketball2;
+            animation-duration: 3s;  
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            
+            
+        }        
+        
+        img#ball3 {         
+            width: 100px;
+            position: relative;
+            left: 50px;
+            animation: basketball3 3s alternate forwards;
+
+            /*
+            animation-name: basketball3;
+            animation-duration: 3s;  
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            */
+            
+            
+        }
+        
+
+        
+
+        div.horizon{
+            width: 200px;
+            height: 200px;
+            border-bottom: 5px solid black;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+<ol>动画
+    <Li>animation-duration（）是必须设置的属性，默认值是0，元素不显示</Li>
+    <Li>设置移动的时候需要定义position属性，因为其默认是静态</Li>
+    <Li>animation-delay动画延迟设置为负数是，可以跳过开头</Li>
+    <Li>animation-iteration-count动画重复次数，infinite表示无限循环</Li>
+    <Li>animation-direction动画播放方向，默认正向，可以reverse反向。
+        <ul>
+        <li>alternate：正反正反正，</li>
+        <li>alternate-reverse:反正反正反</Li>
+        </ul>
+    <li>灵活使用animation-timing-function，实现力学效果</li>
+    <li>时间轴控制力学效果：观察球2（示例）和球3（我自己随便设置的等距时间），可以发现球2在距离缩短之后关键帧也加多了，这样就实现了“更弹”</li>
+    <li>支持animation属性合并简写</li>
+
+
+</ol>
+
+<div class="grid">
+    <div class="container">
+        <div class="cubic"></div>
+
+    </div>
+
+    <div class="container">
+        <div class="horizon">
+            <img id="ball1" src="../图标样式/basketball.png">
+        </div>
+    </div>    
+    
+    <div class="container">
+        <div class="horizon">
+            <img id="ball2" src="../图标样式/basketball.png">
+        </div>
+    </div>    
+    
+    <div class="container">
+        <div class="horizon">
+            <img id="ball3" src="../图标样式/basketball.png">
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+</body></html>

@@ -1,0 +1,208 @@
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson80/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>80滤镜、混合、裁剪和遮罩</title>
+<style type="text/css">
+        div.grid{
+            display: grid;
+            grid-template-rows: repeat(10,200px);
+            grid-template-columns: repeat(3,200px);
+            writing-mode: vertical-lr ;
+                       
+        }
+ 
+        
+        img {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+        }
+
+        .blur2 {
+            filter: blur(2px); 
+        }
+
+        .blur5 {
+            filter: blur(5px); 
+        }
+
+        .low{
+            filter: brightness(0.5);
+        }
+
+        .height{
+            filter:brightness(3);
+        }
+
+        .contrast_low{
+            filter: contrast(0.5);
+        }
+
+        .contrast_height{
+            filter: contrast(3);
+        }
+
+        .saturate_low{
+            filter: saturate(0.5);
+        }
+
+        .saturate_height{
+            filter: saturate(3);
+        }
+
+        .grayscale_low{
+            filter: grayscale(0.5);
+        }
+
+        .grayscale_height{
+            filter: grayscale(1);
+        }        
+        
+        .sepia_low{
+            filter: sepia(0.5);
+        }
+
+        .sepia_height{
+            filter: sepia(1);
+        }
+
+        .negative {
+            filter: hue-rotate(-90deg);
+        }
+        .positive {
+            filter: hue-rotate(90deg);
+        }
+
+        .invert_low{
+            filter: invert(0.5);
+        }
+        .invert_height{
+            filter: invert(1);
+        }        
+        
+        .opacity_low{
+            filter: opacity(0.5);
+        }
+        .opacity_height{
+            filter: opacity(0);
+        }
+
+        .shadow1{
+            filter: drop-shadow(-10px -10px);
+        }
+        .shadow2{
+            filter: drop-shadow(-10px -10px 10px gray);
+        }      
+    </style>
+
+    <title>SVG</title>
+    <style type="text/css">
+        div {
+            font-size: 12em;
+        }
+        .change{
+            animation: change 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+
+        .svg {
+            filter: url(#fractal);
+            
+        }
+
+        @keyframes change{
+            from{
+                font-size: 12em;
+
+            }
+            to{
+                filter: url(#fractal);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>CSS使用filter实现滤镜效果，<a href="https://man.ilovefishc.com/pageCSS3/filter.html#属性值" target="_blank">filter属性</a>(模糊、明度、对比度)</li>
+        <li>hue-rotate：色相旋转（三原色以120度划分360度的色轮，180度为互补色）</li>
+        <li>invert反转：值域0~1，,0.5表示完全灰度</li>
+        <li>相比于直接设置opacity属性，opacity滤镜浏览器会提供硬件加速</li>
+        <li>相比于直接设置box-shadow属性，drop-shadow滤镜浏览器会提供硬件加速</li>
+        <li>CSS支持多个滤镜合并简写</li>
+        <li>SVG滤镜（Scalable Vector Graphics 可伸缩矢量图形）</li>
+    </ol>
+
+
+
+    <div class="change"> FishC</div>
+    <div class="svg">FishC</div>
+
+    <svg>
+        <filter id="fractal" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feturbulence id="turbulence" type="fractalNoise" baseFrequency="0.02" numOctaves="2"></feturbulence>
+        <fedisplacementmap in="SourceGraphic" scale="50"></fedisplacementmap>
+        </filter>
+    </svg>
+
+
+<div class="grid">
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="blur2" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="blur5" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="contrast_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="contrast_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="saturate_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="saturate_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="grayscale_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="grayscale_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="sepia_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="sepia_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="negative" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="positive" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="invert_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="invert_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="opacity_low" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="opacity_height" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+<div><img src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="shadow1" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+<div><img class="shadow2" src="../图标样式/小甲鱼本人插画.png" alt="me"></div>
+
+
+
+</div>
+
+
+
+
+</body></html>
