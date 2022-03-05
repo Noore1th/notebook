@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson58/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>两列布局演示</title>
+    <style type="text/css">
+        h1{
+            clear:left
+        }
+
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        .left {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: pink;
+            float: left;
+        }
+
+        .right {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: lightblue;
+            float: left;
+        }
+
+        aside{
+            width: 200px;
+            height: 200px;
+            background-color:black;
+            float:left;
+        }
+        main{
+            height: 200px;
+            margin-left: 200px;
+            background-color: #333;
+        }
+
+        aside.po{
+            width: 200px;
+            height: 200px;
+            background-color:black;
+            position:absolute;
+
+        }
+        main.po{
+            height: 200px;
+            margin-left: 200px;
+            background-color: #333;
+        }
+
+
+    </style>
+
+
+    <title>三列布局演示</title>
+    <style type="text/css">
+        .left1 {
+            width: 200px;
+            height: 500px;
+            float: left;
+			background-color: pink;
+		}
+
+		.right1 {
+            width: 200px;
+            height: 500px;
+            float: right;
+            background-color: lightblue;
+		}
+
+		.center1 {
+            height: 500px;
+            margin: 0 200px;
+			background-color: cornsilk;
+		}
+
+
+        .left2 {
+            width: 200px;
+            height: 500px;
+            position:absolute;
+			background-color: pink;
+		}
+
+		.right2 {
+            width: 200px;
+            height: 500px;
+            position:absolute;
+            top:0;
+            right:0;
+            background-color: lightblue;
+		}
+
+		.center2 {
+            height: 500px;
+            margin: 0 200px;
+			background-color: cornsilk;
+		}
+
+        .container1{
+            position:relative;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    
+
+    <h1>固定一边的宽度，另一边默认auto，再用margin-left避开覆盖</h1>
+    <aside></aside>
+    <main></main>
+
+    <h1>使用position实现</h1>
+    <aside class="po"></aside>
+    <main class="po"></main>
+
+
+    <h1>max-width，margin 0 auto和宽度百分比</h1>
+    <div class="container">
+        <div class="left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ipsam earum excepturi eos quod distinctio nihil modi blanditiis reprehenderit eligendi architecto error non magni dicta rerum suscipit qui repudiandae corporis?</p>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore nihil odio nulla pariatur necessitatibus in cumque porro quaerat nemo aperiam vel praesentium corrupti ut, dolores reiciendis. Adipisci vero magnam optio.</p>
+        </div>
+    </div>
+
+    <h1>把center放在最后刷新，可以不用转化为百分比</h1>
+
+    <div class="container1">
+        <div class="left1"></div>
+        <div class="right1"></div>
+        <div class="center1"></div>
+    </div>
+
+    <h1>使用position实现,绝对位置的设定需要放在box内</h1>
+    <div class="container1">
+        <div class="left2"></div>
+        <div class="right2"></div>
+        <div class="center2"></div>
+    </div>
+
+
+
+
+</body></html>

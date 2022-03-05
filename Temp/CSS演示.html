@@ -1,0 +1,425 @@
+
+<!-- saved from url=(0058)https://ilovefishc.com/html5/css3/lesson31/show/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="鱼C工作室|免费编程视频教学|Python教学|Web开发教学|全栈开发教学|C语言教学|汇编教学|Win32开发|加密与解密|Linux教学">
+    <meta name="description" content="鱼C工作室为大家提供最有趣的编程视频教学。">
+    <meta name="author" content="鱼C工作室">
+    <link rel="shortcut icon" type="image/x-icon" href="https://ilovefishc.com/html5/css3/lesson31/show/favicon.ico">
+    <!--CSS-->
+    <style>/* 鱼兮 */
+    body {
+        font: 100% Lucida Sans, Verdana;
+        margin: 20px;
+        line-height: 26px;
+    }
+
+    .container {
+        xmin-width: 900px;
+    }
+
+    .wrapper {
+        position: relative;
+        overflow: auto;
+    }
+
+    #top, #sidebar, #bottom, .menuitem {
+        border-radius: 4px;
+        margin: 4px;
+    }
+
+    #top {
+        background-color: #2ebb96;
+        color: #ffffff;
+        padding: 15px;
+    }
+
+    #menubar {
+        width: 200px;
+        float: left
+    }
+
+    #main {
+        padding: 10px;
+        margin: 0 210px;
+    }
+
+    #sidebar {
+        background-color: #555555;
+        color: #ffffff;
+        padding: 10px;
+        width: 180px;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    #bottom {
+        border: 1px solid #d4d4d4;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        line-height: 14px;
+    }
+
+    #top h1, #top p, #menulist {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menuitem {
+        background-color: #f1f1f1;
+        border: 1px solid #d4d4d4;
+        list-style-type: none;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    .menuitem:hover {
+        background-color: #ffffff;
+    }
+
+    .menuitem:first-child {
+        background-color: #2ebb96;
+        color: white;
+        font-weight: bold;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+
+    @media (max-width: 800px) {
+        #sidebar {
+            width: auto;
+            position: relative;
+        }
+
+        #main {
+            margin-right: 0;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        #menubar {
+            width: auto;
+            float: none;
+        }
+
+        #main {
+            margin: 0;
+        }
+    }
+    </style>
+    <style>/* 日式 */
+    body {
+        font-family: Arial;
+        background-color: #d14836;
+        line-height: 20px;
+    }
+
+    .container {
+        xmin-width: 900px;
+    }
+
+    .wrapper {
+        position: relative;
+        overflow: auto;
+    }
+
+    #top {
+        color: #ffffff;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+    }
+
+    #top h1 {
+        margin: 0;
+        line-height: 50px;
+    }
+
+    #menubar {
+        width: 190px;
+        float: right;
+    }
+
+    #main {
+        padding: 10px;
+        background-color: #ffffff;
+        font: 80% Verdana;
+    }
+
+    #main h1, #main h2 {
+        color: #d14836;
+    }
+
+    #sidebar {
+        background-color: #F6DAD7;
+        color: #d14836;
+        padding: 10px;
+    }
+
+    #bottom {
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        color: #ffffff;
+    }
+
+    #menulist {
+        padding: 0;
+        font: 16px verdana;
+    }
+
+    .menuitem {
+        width: 155px;
+        background-color: #d14836;
+        border: 1px solid #d14836;
+        border-radius: 40px;
+        color: #ffffff;
+        list-style-type: none;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menuitem:nth-child(2) {
+        background-color: white;
+        color: #d14836;
+        font-weight: bold;
+    }
+
+    .menuitem:hover {
+        background-color: #ffffff;
+        color: #d14836;
+    }
+
+    a {
+        color: #d14836;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    </style>
+    <style>/*朋克 */
+    body {
+        font: 100% Verdana;
+        margin: 20px;
+        line-height: 26px;
+    }
+
+    .container {
+        xmin-width: 900px;
+    }
+
+    .wrapper {
+        position: relative;
+        overflow: auto;
+    }
+
+    #sidebar {
+        background-color: #f1f1f1;
+        border: 1px solid #d4d4d4;
+        padding-left: 10px;
+    }
+
+    #bottom {
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        line-height: 14px;
+    }
+
+    h1, h2, h3 {
+        color: #fa19ed;
+    }
+
+    #menulist {
+        padding: 0;
+        position: relative;
+        overflow: auto;
+    }
+
+    .menuitem {
+        width: 165px;
+        float: left;
+        background-color: #555555;
+        color: #ffffff;
+        list-style-type: none;
+        margin: 4px;
+        padding: 2px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menuitem:nth-child(3) {
+        color: #fa19ed;
+        background-color: #f2fa19;
+    }
+
+    .menuitem:hover {
+        background-color: #999999;
+    }
+
+    a {
+        color: #000000;
+    }
+
+    a:hover {
+        color: #84c754;
+    }
+    </style>
+    <style>/* 极客 */
+    body {
+        font: 100% Courier New;
+        margin: 20px;
+        line-height: 26px;
+        background-color: #000000;
+    }
+
+    .container {
+        xmin-width: 900px;
+    }
+
+    .wrapper {
+        position: relative;
+        overflow: auto;
+    }
+
+    #top {
+        color: #84c754;
+        padding: 15px;
+    }
+
+    #main {
+        padding: 10px;
+        color: #84c754;
+    }
+
+    #sidebar {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        padding: 10px;
+        width: 320px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        font-size: 80%;
+        line-height: 20px;
+    }
+
+    #bottom {
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        line-height: 14px;
+    }
+
+    #top h1, #top p {
+        margin: 0;
+    }
+
+    .menuitem {
+        color: #84c754;
+        cursor: pointer;
+    }
+
+    .menuitem:nth-child(4) {
+        color: white;
+        font-weight: bold;
+    }
+
+    .menuitem:hover {
+        color: #ffffff;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: #84c754;
+    }
+
+    @media (max-width: 600px) {
+        #sidebar {
+            width: auto;
+            margin-bottom: 10px;
+            position: relative;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container wrapper">
+    <div id="top">
+        <h1>《零基础入门学习Web开发》の CSS篇</h1>
+        <p>单击样式，一键换肤</p>
+    </div>
+    <div class="wrapper">
+        <div id="menubar">
+            <ul id="menulist">
+                <li class="menuitem" onclick="reStyle(0)">鱼兮
+                </li>
+                <li class="menuitem" onclick="reStyle(1)">日式
+                </li>
+                <li class="menuitem" onclick="reStyle(2)">朋克
+                </li>
+                <li class="menuitem" onclick="reStyle(3)">极客
+                </li>
+                <li class="menuitem" onclick="noStyles()">素颜
+                </li>
+            </ul>
+        </div>
+        <div id="main">
+            <h1>鱼C工作室荣誉出品</h1>
+            <p>层叠样式表（Cascading Style Sheets，缩写：CSS）是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（包含字体、间距和颜色等）的计算机语言，由 W3C 定义和维护。</p>
+            <p>CSS 不能单独使用，必须与 HTML 或 XML 一起协同工作，为 HTML 或 XML 起装饰作用。其中 HTML 负责确定网页中有哪些内容，CSS 确定以何种外观（包含大小、粗细、颜色、对齐和位置）展现这些元素。CSS 可以用于设定页面布局、设定页面元素样式、设定适用于所有网页的全局样式。CSS 还可以零散地直接添加在要应用样式的网页元素上，也可以集中化内置于网页、链接式引入网页以及导入式引入网页。</p>
+            <p>CSS 最重要的目标是将文件的内容与它的显示分隔开来。在 CSS 出现前，几乎所有的 HTML 文件内都包含文件显示的信息，比如字体的颜色、背景应该是怎样的、如何排列、边缘、连线等等都必须一一在 HTML 文件内列出，有时重复列出。CSS 使作者可以将这些信息中的大部分隔离出来，简化 HTML 文件，这些信息被放在一个辅助的、用 CSS 语言写的文件中。HTML 文件中只包含结构和内容的信息，CSS 文件中只包含样式的信息。</p>
+            <p style="text-align:right;">-- 维基百科</p>
+            <p>点击下面样式进行换肤：<br>
+                <a href="https://ilovefishc.com/html5/css3/lesson31/show/index.html#" onclick="reStyle(0);return false">鱼兮</a>,
+                <a href="https://ilovefishc.com/html5/css3/lesson31/show/index.html#" onclick="reStyle(1);return false">日式</a>,
+                <a href="https://ilovefishc.com/html5/css3/lesson31/show/index.html#" onclick="reStyle(2);return false">朋克</a>,
+                <a href="https://ilovefishc.com/html5/css3/lesson31/show/index.html#" onclick="reStyle(3);return false">极客</a>.
+            </p>
+            <h2>搭建原理</h2>
+            <p>本页面基于 div 元素对页面进行分组，通过 JavaScript 在当前页面，按照鱼油选择进行 CSS 样式渲染<br><a href="https://ilovefishc.com/html5/css3/lesson31/show/index.html#" onclick="noStyles();return false">素颜</a>.</p>
+        </div>
+        <div id="sidebar">
+            <h3>广告</h3>
+            <p>欢迎金主爸爸入驻加盟，但为了更好地视频体验，任何广告不会投放在视频中，除非是我们自己的&lt;(▰˘◡˘▰)&gt;&nbsp;</p>
+        </div>
+    </div>
+
+
+    <div id="bottom">
+        对待生命，你不妨大胆些，因为我们终将要失去它<br>
+        https://ilovefishc.com
+    </div>
+</div>
+
+<script src="./CSS演示_files/fishc.js.下载"></script>
+
+
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson49/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>49_50显示类型display属性</title>
+<title>看山不是山</title>
+<style type="text/css">
+    span {
+        display: block;
+    }
+    a{
+        display: block;
+        font-size: 25px;
+    }
+    p{
+        display: inline;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px solid pink;
+        border: 2px dotted pink;
+    }
+    div{
+        max-width: 600px;
+        margin: 1em auto;
+        border: 5px solid #333;
+    }
+    li{
+        display: inline;
+    }
+
+
+    p#block{
+        width: 6em;
+        display: block;
+    }
+
+    #block p {
+        width: 6em;
+        display: block;
+    }
+
+    #inline p {
+        width: 6em;
+        display: inline;
+    }
+
+    #inline-block p {
+        width: 6em;
+        display: inline-block;
+    }
+    #网页头部 a{
+        display: inline-block;
+        width: 90px;
+        height: 40px;
+        color:tomato;
+        background-color: #333;
+
+        text-align: center;
+        line-height: 40px;
+    }
+
+    #none{
+        display: none;
+    }
+    p#visibility{
+        visibility: hidden;
+    }
+    
+</style>
+</head>
+<body>
+    <h1>display属性理解：</h1>
+    <div>
+    <ol>
+        <li>HTML和CSS是分开渲染的，HTML-->DOM树，CSS-->样式规则，两者合并形成网页效果。</li>
+        <li>CSS样式层级优先级：内嵌CSS>内部CSS>link引用>浏览器自定义>浏览器默认</li>
+        <li>每一个HTML都有<a href="https://man.ilovefishc.com/pageCSS3/display.html#属性值" target="_blank">默认的display属性值</a>（没有任何CSS时的浏览器默认display）</li>
+        <li>block块级元素：独占一行，周围的元素强制换行。</li>
+    
+    </ol>
+    </div>
+    <h1>行变块：</h1>
+    <div>
+        
+        <span>看！我是行内元素，但是独立行显示</span>
+        <span>看山是山，看水是水。</span>
+        <span>看山不是山，看水不是水。</span>
+        <span>看山还是山，看水还是水。</span>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">整个一行都可以点</a>
+    </div>
+
+
+    <h1>块变行：</h1>
+    <div>       
+        <p>看！我是块级元素，但是在一行内显示</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+        <p>喜欢你</p>
+    </div>
+
+
+
+    <h1>列表变行：</h1>
+    <div>       
+        <ul>我本来是独立行，纵向显示的:
+            <li>我喜欢这样跟着你，</li>
+            <li>随便你带我到哪里。</li>
+            <li>你的脸慢慢清晰，</li>
+            <li>明天也慢慢的慢慢。。。</li>
+        </ul>
+    </div>
+
+    <h1>block</h1>
+    <div id="block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <p>看山不是山，看水不是水。</p>Quis dolores asperiores quidem ipsa exercitationem nulla, hic nisi blanditiis voluptatum velit debitis accusamus magnam. Laboriosam tenetur illo cupiditate, dolorem harum sint.</div>
+    <h1>inline</h1>
+    <div id="inline">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <p>看山不是山，看水不是水。</p>Quis dolores asperiores quidem ipsa exercitationem nulla, hic nisi blanditiis voluptatum velit debitis accusamus magnam. Laboriosam tenetur illo cupiditate, dolorem harum sint.</div>
+    <h1>inline-block</h1>
+    <div id="inline-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis dolores asperiores quidem ipsa <p>看山不是山，看水不是水。</p>exercitationem nulla, hic nisi blanditiis voluptatum velit debitis accusamus magnam. Laboriosam tenetur illo cupiditate, dolorem harum sint.</div>
+
+    <div id="网页头部">
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">今天</a>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">学的</a>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">这么</a>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">起劲</a>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">都已经</a>
+        <a href="https://man.ilovefishc.com/pageHTML5/a.html#属性">十二点半了</a>
+
+    </div>
+
+    <h1>display:none</h1>
+    <div>
+        <p id="block">看山是山，看水是水。</p>
+        <p id="none">看山不是山，看水不是水。</p>
+        <p id="block">看山还是山，看水还是水。</p>
+    </div>
+
+
+    <h1>visibility:hidden</h1>
+    <div>
+        <p id="block">看山是山，看水是水。</p>
+        <p id="visibility">看山不是山，看水不是水。</p>
+        <p id="block">看山还是山，看水还是水。</p>
+    </div>
+
+
+
+
+
+
+</body></html>

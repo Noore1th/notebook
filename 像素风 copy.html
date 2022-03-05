@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素风copy</title>
+    <style>
+        .container{
+            display: grid;
+            width:300px;
+            height: 300px;
+            background-color:beige;
+            grid-template-rows: repeat(10,1fr);
+            grid-template-columns: repeat(10,1fr);
+            grid-template-areas: 
+              
+                '. . . . . g1 . . . . '
+                '. . . . g2 g2 g2 . . . '
+                '. . . g3 g3 g3 g3 g3 . . '
+                '. . g4 g4 g4 g4 g4 g4 g4 . '
+                '. . . g5 g5 g5 g5 g5 . . '
+                '. . g6 g6 g6 g6 g6 g6 g6 . '
+                '. g7 g7 g7 g7 g7 g7 g7 g7 g7 '
+                '. . g8 g8 g8 g8 g8 g8 g8 . '
+                '. . . b9 b9 b9 b9 b9 . . '
+                '. . . b10 b10 b10 b10 b10 . . '
+                
+
+               
+
+                
+                
+            ;
+        }
+
+        .darkred{
+            background-color: darkred;
+            border: 1px solid black;
+            grid-area: r1;
+        }
+        .darkgreen1{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g1;
+        }
+        .darkgreen2{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g2;
+        }
+
+        .darkgreen3{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g3;
+        }  
+        .darkgreen4{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g4;
+        }  
+        .darkgreen5{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g5;
+        }  
+        .darkgreen6{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g6;
+        }         
+        .darkgreen7{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g7;
+        }           
+        .darkgreen8{
+            background-color: darkgreen;
+            border: 1px solid black;
+            grid-area: g8;
+        }         
+          
+        .brown9{
+            background-color:brown;
+            border: 1px solid black;
+            grid-area: b9;
+        }     
+        .brown10{
+            background-color:brown;
+            border: 1px solid black;
+            grid-area: b10;
+        }
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="container">
+        <div class="darkred"></div>
+
+        <div class="darkgreen1"></div>
+        <div class="darkgreen2"></div>
+        <div class="darkgreen3"></div>
+        <div class="darkgreen4"></div>
+        <div class="darkgreen5"></div>
+        <div class="darkgreen6"></div>
+        <div class="darkgreen7"></div>
+        <div class="darkgreen8"></div>
+        <div class="brown9"></div>
+        <div class="brown10"></div>
+       
+
+
+
+    </div>
+
+
+
+
+    
+</body>
+</html>

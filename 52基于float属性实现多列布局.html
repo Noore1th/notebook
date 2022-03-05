@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson52/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>52基于float属性实现多列布局</title>    
+    <title>实现两列布局</title>
+    <style type="text/css">
+        /* 利用float实现两列布局 */
+        div.left {
+            background-color: pink;
+            width: 50%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        div.right {
+            background-color: lightblue;
+            width: 50%;
+            float: right;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+    <title>实现三列布局</title>
+    <style type="text/css">
+        div.left1 {
+            background-color: pink;
+            width: 33.33%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        div.middle1 {
+            background-color: cornsilk;
+            width: 33.33%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }        
+
+        div.right1 {
+            background-color: lightblue;
+            width: 33.33%;
+            float: right;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            clear: left;
+            
+        }
+        h1{
+            clear: left;
+        }
+    </style>
+
+
+<title>实现三列布局</title>
+<style type="text/css">
+    /* 利用position实现三列布局 */
+    .main {
+        position: relative;
+    }
+
+    .p_left {
+        background-color: pink;
+        width: 33.33%;
+        position: absolute;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .p_middle {
+        background-color: cornsilk;
+        width: 33.33%;
+        position: absolute;
+        left: 33.33%;
+        padding: 20px;
+        box-sizing: border-box;
+    }        
+
+    .p_right {
+        background-color: lightblue;
+        width: 33.33%;
+        position: absolute;
+        left: 66.66%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <h1>两列布局演示</h1>
+    <h2>设置box-sizing: border-box;让padding不会压盖导致换行</h2>
+    <div class="left">
+        <h2>左侧列巴拉巴拉</h2>
+        <p>Lrem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+
+
+    </div>
+    <div class="right">
+        <h2>右侧列巴拉巴拉</h2>
+        <p>Lrem ipsum dolor sit amet consectetur adipisicing elit. Atque natus ducimus, corporis veritatis obcaecati, illo ex nemo corrupti dicta a iusto totam in nostrum. Accusamus fugit ut magnam facilis facere!</p>
+    </div>
+
+
+
+    <h1>float三列布局演示</h1>
+    <div class="left1">
+        <h2>左侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+    </div>
+    <div class="middle1">
+        <h2>中间列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
+    </div>
+    <div class="right1">
+        <h2>右侧列巴拉巴拉</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+    </div>
+
+
+    <h1><a href="https://man.ilovefishc.com/pageCSS3/clear.html#属性值" target="_blank">clear清除浮动</a></h1> 
+    <a href="http://127.0.0.1:5500/HTMLCSSJS/51%E6%B5%AE%E5%8A%A8float%E5%B1%9E%E6%80%A7.html#跳转" target="_blank">看看51中的浮动，被清除是什么效果</a>
+    <footer>Copyright © 2020 FishC.com.cn All rights reserved.</footer>
+
+
+    <h1>position三列布局演示</h1>
+    <div class="main">
+        <div class="p_left">
+            <h2>左侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+        <div class="p_middle">
+            <h2>中间列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum blanditiis consequatur repellendus itaque optio sequi, alias mollitia commodi reiciendis, vitae tempora? Sequi ipsam rem officia accusantium quam nostrum, fugiat eius. Inventore, deleniti incidunt accusamus tempore unde et quaerat nobis sunt. Provident, dolorum ea? Maxime, animi. Voluptates ipsam omnis nihil nobis.</p>
+        </div>
+        <div class="p_right">
+            <h2>右侧列巴拉巴拉</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est exercitationem sint animi harum minima veritatis itaque asperiores numquam cupiditate, odio ad nobis tempore doloribus facilis. Inventore itaque quis obcaecati adipisci?</p>
+        </div>
+    </div>
+</body></html>

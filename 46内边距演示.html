@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson46/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>内边距演示</title>
+<style type="text/css">
+        /* 为p元素设置内边距 */
+        #p2{
+            border: 2px solid #cbcbcb;
+            background-color: beige;
+            background-clip: content-box;
+            padding: 20px 40%;
+        }        
+        #p3{
+            border: 2px solid #cbcbcb;
+            background-color: beige;
+            background-clip: content-box;
+            padding: 20px 40% 100px;
+        }
+
+        #p4 {
+            border: 2px solid #cbcbcb;
+            background-color: beige;
+            background-clip: content-box;
+            padding:20px 2em 30px 50%;
+
+            /*
+            padding-top: 50px;
+            padding-right: 20em;
+            padding-bottom: 20%;
+            padding-left: 20%;
+            */
+        }
+
+        #p5{
+            width: 12em;
+            border: 2px solid #cbcbcb;
+            background-color: beige;
+            background-clip: content-box;
+            margin:auto;
+        }
+
+        div#d1{
+            width: 200px;
+            height: 50px;
+            background-color:darkred;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        div#d2{
+            width: 200px;
+            height: 50px;
+            background-color:#cbcbcb;
+            margin-top: 50px;
+            text-align: center;
+        }        
+        div#d3{
+            position: absolute;
+            height: 50px;
+            top:500px;
+            left:205px;
+            border: 2px solid black;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .box1{
+            width: 300px;
+            height: 100px;
+            background-color: darkred;
+            overflow: hidden;
+    
+
+        }
+        .box2{
+            width: 300px;
+            height: 50px;
+            background-color: #cbcbcb;
+            margin-top: 25px;
+            text-align: center;
+         
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <a href="https://man.ilovefishc.com/pageCSS3/background-clip.html#属性值" target="_blank">使用background-clip:设置背景填充范围</a>
+    <p id="p2">Padding合并简写2值：上下 右左</p>
+    <p id="p3">Padding合并简写3值：上 右左 下</p>
+    <p id="p4">Padding合并简写4值：上 右 下 左（顺时针）</p>
+
+    <p id="p5">外边距使用margin:auto，可以实现水平居中。（必须是有宽度的块级元素）</p>
+
+    <div id="d1"><p>我的margin是30px<br/>（我被塌陷了）</p></div>
+    <div id="d2"><p>我的margin是50px</p></div>
+    <div id="d3"><p>两个外边距并没有都显示，而是塌陷小的那个。（这里的宽度只有50px）</p></div>
+
+    <div class="box1">
+        <div class="box2"><p>使用overflow解决内部塌陷</p></div>
+    </div>
+
+    
+
+
+
+</body></html>

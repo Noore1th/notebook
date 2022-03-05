@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson70/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>栅格布局的对齐方式</title>
+<style type="text/css">
+    .item1{
+        grid-area: a1;
+    
+    }
+    .item2{grid-area: b2;}
+    .item3{grid-area: c3;}
+    .item4{grid-area: d4;}
+    .item5{grid-area: e5;}
+    .item6{grid-area: f6;}
+  
+    .grid-container {
+        display: grid;
+        padding: 10px;
+        grid-gap: 10px;
+        grid-template-areas:
+            'a1 a1 b2 c3 c3 c3 c3'
+            'd4 e5 e5 f6 . . .';
+        grid-template-rows: 100px 200px;
+        background-color: lightblue;
+        place-content: start space-between;
+        
+
+     
+
+    }
+    
+    .grid-container > div {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid white;
+        background-color: pink;
+      
+    }
+    </style>
+</head>
+<body>
+    <ol>栅格布局的对齐方式：
+        <li>基本和弹性盒一致</li>
+        <li>justify-items:横轴方向，元素相对每个栅格居中</li>
+            <ul>
+                <li>弹性盒没有这个属性制</li>
+                <li>justify-content:栅格相对栅格盒子</li>
+            </ul>
+        <li>justity/align-self:单个栅格的排布方式</a></li>
+        <li>place-content:justity和align的缩写</li>
+
+
+    </ol>
+
+
+
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+
+</div>
+
+
+</body></html>

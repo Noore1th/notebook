@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson61/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>弹性盒布局</title>
+    <style type="text/css">
+        /* 没有CSS的代码是缺少灵魂的 */
+        a{
+            font-size: 15px;
+        }
+
+        li{
+            padding:1px
+            
+        }
+
+        ul{
+            list-style-type:circle;
+        }
+
+
+        .flex-container{
+            display: flex;
+            border:10px solid darkred ;
+            height: 200px;
+            width: 500px;
+            flex-flow: row wrap;
+       
+            justify-content: center;
+
+
+            /*
+            flex-direction: column-reverse;
+            flex-wrap: wrap-reverse;
+            */
+
+        }
+        .inline-flex-container{
+            display: inline-flex;
+            border:10px solid darkgreen;
+            height: 200px;
+            width: 500px;
+
+            /*
+            flex-direction: column-reverse;
+            flex-wrap: wrap-reverse;
+            */
+        }
+
+        .flex-container > div{
+            margin: 2px;
+            padding: 2px;
+            color: white;
+            background-color: #333;
+            width: 150px;
+            
+            
+
+        }
+
+
+        .inline-flex-container >div{
+            margin: 3px;
+            padding: 3px;
+            color: white;
+            background-color: #333;
+            
+        }
+
+        .flex-container > div:nth-of-type(1){
+            order:1;
+            background-color:blueviolet
+        }        
+        .flex-container > div:nth-of-type(5){
+            order:-1;
+        }
+
+        
+        .shrink0{
+            flex-shrink: 0;
+        }        
+        .shrink2{
+            flex-shrink: 2;
+        }        
+        .shrink4{
+            flex-shrink: 4;
+        }
+        .grow1{
+            flex-grow: 1;
+        }        
+        .grow5{
+            flex-grow: 5;
+        }      
+        .basis3{
+            flex-basis: 300px;
+        }
+
+        
+        
+
+        .navigation{
+            border: 10px solid yellowgreen;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .special{
+            align-self:flex-end;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>flex弹性容器</h1>
+    <ol>
+
+        <li><a href="https://man.ilovefishc.com/pageCSS3/flexFlow.html#属性值" target="_blank">flex-flow:direction和wrap两者合并</a></li>
+            <ul>
+            <li><a href="https://man.ilovefishc.com/pageCSS3/flexDirection.html#属性值" target="_blank">flex-direction属性：设置主轴是行/列,以及是否反向</a></li>
+            <li><a href="https://man.ilovefishc.com/pageCSS3/flexDirection.html#属性值" target="_blank">flex-wrap属性：拆列/行</a></li>
+            </ul>
+        <li><a href="https://man.ilovefishc.com/pageCSS3/justifyContent.html#属性值" target="_blank">justify-content:设置主轴上的对齐方式(指定往哪边靠)</a></li>
+
+        <li><a href="https://man.ilovefishc.com/pageCSS3/alignContent.html#属性值" target="_blank">align-content:设置副轴上的对齐方式(全部盒子)</a>
+            <ul>
+            <li><a href="https://man.ilovefishc.com/pageCSS3/alignItems.html#属性值" target="_blank">align-items:设置副轴上的对齐方式(全部元素内容)</a></li>
+            <li><a href="https://man.ilovefishc.com/pageCSS3/alignSelf.html#属性值" target="_blank">align-self:设置单独的副轴上的对齐方式(元素属性，而非盒子属性)</a></li>
+            </ul>
+        
+        
+        
+        </li>
+        <li><a href="https://man.ilovefishc.com/pageCSS3/order.html.html#属性值" target="_blank">order：用数字指定元素的顺序</a></li>
+        <li><a href="https://man.ilovefishc.com/pageCSS3/flexGrow.html#属性值" target="_blank">flex-grow：用数字指定元素的相对扩展(有空位的时候优先执行)</a></li>
+        <li><a href="https://man.ilovefishc.com/pageCSS3/flexShrink.html#属性值" target="_blank">flex-shrink：用数字指定元素的相对压缩</a></li>
+        <li><a href="https://man.ilovefishc.com/pageCSS3/flexBasis.html#属性值" target="_blank">flex-basis：指定元素在主轴上的初始值(元素跟着轴走，不容易出现奇怪的排布，此值覆盖固定宽度/高度)</a></li>
+        <li>三个一起简写：默认flex: 0,1,auto</li>
+        <li>快捷赋值auto，即flex: 1,1,auto</li>
+        <li>快捷赋值none，即flex: 0，0,auto</li>
+        <li>弹性元素不像BFC会发生margin塌陷</li>
+        <li>弹性元素不支持float浮动操作，一定要改变位置时可以用position：absolute</li>
+
+    
+
+    </ol>
+
+    <!-- 皮之不存，毛将焉附 -->
+ 
+    <div class="flex-container">
+        <div class="shrink4">One</div>
+        <div class="shrink2">Two</div>
+        <div class="shrink0">Three</div>  
+        <div>Five</div>
+        <div>Five</div>
+        <div class="basis3">Five</div>
+        <div>Five</div>
+        <div class="grow5">Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        <div>Five</div>
+        
+ 
+      
+  
+    </div>
+    <br> 
+
+    <div class="inline-flex-container">
+        <div>One</div>
+        <div style="font-size: 2em;">Two</div>
+        <div style="font-size: 4em;">Three</div>
+        <div class="grow1">Four我弹性超大</div>
+        <div class="special">SPECIAL</div>
+        <div class="grow3">Five我弹性更大</div>
+        <div style="font-size: 3em;">Five</div>
+        <div>Five</div>
+ 
+    </div>
+
+
+    <nav class="navigation">
+        <a >导航栏</a>
+        <a>从横的</a>
+        <a>变成</a>
+        <a>竖的</a>
+    </nav>
+
+
+
+
+
+
+</body></html>

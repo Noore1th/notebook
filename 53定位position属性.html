@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson53/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>53定位position属性</title>
+<title>定位决定地位</title>
+<style type="text/css">
+        img {
+            right: 100px;
+            bottom: 100px;
+            width: 100px; 
+            border: 2px solid lightblue;
+        }
+
+        img.m2 {
+            left: 400px;
+            top: 100px;
+            width: 100px;
+            position: relative;
+            border: 2px solid lightblue;
+        }
+
+        img.m3 {
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid lightblue;
+        }
+
+
+        img.m4 {
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            position: absolute;
+            border: 10px solid lightgreen;
+        }
+
+
+        img.m44 {
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            position: absolute;
+            border: 10px solid blue;
+        }
+        img.m5 {
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            position: fixed;
+            border: 10px solid red;
+        }
+        img.m6 {
+            right: 20px;
+            bottom: 20px;
+            width: 100px;
+            position: sticky;
+            top:0;
+            border: 10px solid yellow;
+        }
+
+        div.rel{
+            width: 400px;
+            height: 150px;
+            position: relative;
+            border: 2px solid pink;
+
+
+        }
+
+        div.nop{
+            width: 400px;
+            height: 150px;
+            border: 2px solid pink;
+
+        }
+        
+        div.sta{
+            width: 400px;
+            height: 150px;
+            position: static;
+            border: 2px solid pink;
+        }
+
+
+
+        div.top{
+            position:sticky;
+            top:0;
+    
+            }
+
+
+        a{
+            display: block;
+            background-color:darkblue;
+            color: white;
+            text-align: center;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1><a href="https://man.ilovefishc.com/pageCSS3/position.html#属性值" target="_blank">position属性值</a></h1>
+
+    <ol>
+        <li>当position不设置时，默认是static，即静态忽略忽略 top, bottom, left, right 或者 z-index 声明</li>
+    </ol>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptas totam quod ad voluptatibus, maiores perferendis, enim, commodi omnis ducimus porro nihil hic placeat consectetur velit ipsum quo voluptates accusantium.</p>
+    <img  src="../表情包/ikkyu.gif",alt="ikkyu">
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+
+    <ol>
+        <li value="2"> 设置relative属性时，偏移生效，原来的位置依旧占据，元素实际显示时随意压盖</li>
+
+    </ol>
+
+
+    <img class="m2" src="../表情包/ikkyu.gif",alt="ikkyu">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+    <ol>
+        <li value="3">设置为absolute时,位置元素top, bottom, left, right表示距离父元素的距离</li>
+    </ol>
+
+
+    <div class="rel"><img class="m3" src="../表情包/ikkyu.gif",alt="ikkyu"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+
+    <ol>
+        <li value="4">设置为absolute时,当没有父元素，或者父元素位置不可用时，参照最外层可见元素，即可见的浏览器界面</li>
+        <dl>解释：
+            <dd>在示例中，可以到达的最右下位置是在全屏的时候，不断缩小时保持在右下角。</dd>
+            <dd>滚动条中的范围不参与计算</dd>
+            <dd>虽然position默认为static，但只要不申明，浏览器会认为其位置可用，从而以此为参照</dd>
+          
+        </dl>
+        
+
+
+    </ol>
+
+    <div class="onp"><img class="m4" src="../表情包/ikkyu.gif",alt="ikkyu"></div>
+    <div class="sta"><img class="m44" src="../表情包/ikkyu.gif",alt="ikkyu"></div>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+
+    <ol>
+        <li value="5">设置为fixed时，作用在整个浏览器卷轴上</li>       
+    </ol>
+
+    <div class="sta"><img class="m5" src="../表情包/ikkyu.gif",alt="ikkyu"></div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+    <ol>
+        <li value="6">设置为sticky时，</li>       
+    </ol>
+
+    <div class="nop"><img class="m6" src="../表情包/ikkyu.gif",alt="ikkyu"></div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit error eius modi earum distinctio sunt beatae rerum facilis harum in voluptatibus incidunt magnam animi mollitia, soluta qui quas atque deserunt?</p>
+
+
+    <div class="top">
+        <a href="https://ilovefishc.com" target="_blank">https://ilovefishc.com滚动网页至设定距离时，我是固定不动</a>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+
+    
+
+    <div class="top">
+        <a href="https://ilovefishc.com" target="_blank">https://ilovefishc.com2222222222222</a>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+
+    
+
+
+
+
+    <div class="top">
+        <a href="https://ilovefishc.com" target="_blank">https://ilovefishc.com333333333</a>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta asrchitecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit quae provident, ipsam quo inventore esse sequi corrupti pariatur ab unde accusantium, numquam quibusdam quaerat perferendis reiciendis. Hic, reiciendis possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis, veritatis in est dicta architecto. Suscipit asperiores minus expedita! Cum possimus velit cupiditate eveniet quos incidunt dicta rerum dignissimos accusantium!possimus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quam temporibus iusto libero fugiat dolor rerum voluptate maiores! Mollitia dolore quos rerum assumenda iste doloribus. Officiis esse assumenda nam ut.</p>
+
+
+  
+      
+     
+
+
+
+
+
+
+
+
+
+</body></html>

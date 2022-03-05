@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://ilovefishc.com/html5/css3/lesson77/test1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>变形效果演示</title>
+<style type="text/css">
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            transition: 2s;
+            color: white;
+            background-color: lightblue;
+        }
+
+        .rotate_2d:hover {
+            background-color: pink;
+            transition: 2s;
+            transform: rotate(180deg);
+        }     
+
+        .rotate_3d:hover {
+            background-color: pink;
+            transition: 2s;
+            transform:rotate3D(1, 1, 1, 180deg);
+        }
+
+        
+
+        .x_translation:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: translateX(200px);
+        }        
+        .y_translation:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: translateY(200px);
+        }        
+        .xy_translation:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: translate(200px,-200px);
+        }        
+        .d3d_translation:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: translate3d(200px,-200px,200px);
+        }        
+        
+       
+        .x_scale:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: scaleX(1.5);
+        }        
+        .y_scale:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: scaleY(0.5);
+        }        
+        .x_scale:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: scale(1.5,0.5);
+        }        
+        
+        
+        .x_skew:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: skewX(45deg);
+        }        
+        .y_skew:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: skewY(45deg);
+        }        
+        .xy_skew:hover{
+            background-color: pink;
+            transition: 2s;
+            transform: skew(45deg,45deg);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <ol>旋转：
+        <li>2D旋转：transform: rotate(180deg);正数顺时针旋转</li>
+        <li>3D旋转：transform: rotateY(180deg);末尾可选X Y Z</li>
+        <li>3D旋转：transform: rotate3D(1,1,1,180deg);自定义X Y Z三个参数的旋转分量</li>
+    </ol>
+
+
+    <div class="rotate_2d">2D变形</div>
+    <div class="rotate_3d">3D变形</div>
+
+    <ol>移动：
+        <li>使用translate函数实现</li>
+    </ol>
+
+    <div class="x_translation">沿着X轴移动</div>
+    <div class="y_translation">沿着Y轴移动</div>
+    <div class="xy_translation">沿着XY轴移动</div>
+    <div class="d3d_translation">全息移动(等待硬件开发中...)</div>
+
+    <ol>缩放：
+        <il>使用scale函数实现</il>
+    </ol>
+
+    <div class="x_scale">沿着X轴放大</div>
+    <div class="y_scale">沿着y轴缩小</div>
+    <div class="x_scale">沿着Xy轴伸缩</div>
+
+    <ol>倾斜：
+        <li>使用skew函数实现</li>
+    </ol>
+    <div class="x_skew">沿着X轴倾斜</div>
+    <div class="y_skew">沿着X轴倾斜</div>
+    <div class="xy_skew">沿着Xy轴倾斜</div>
+
+</body></html>
