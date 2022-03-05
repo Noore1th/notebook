@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS01加载、修改、检测、响应</title>
+    <script src="JS01加载、修改、检测、响应.js"></script>
+
+</head>
+<body>
+
+
+    <h1>JavaScript 是一种轻量级的编程语言。</h1>
+    <p id="demo" onclick="changeColor(this)">日期会显示在这个位置，JS是在获取了要素空间的下一行直接传递值吗？</p>
+    <p>太神奇了，不用var申明变量，甚至不创建变量x，都能运行成功</p>
+
+    <button type="button" onclick="displayDate()">显示日期</button>
+
+
+    <button type="button" onclick="changeColor(this)">修改样式</button>
+
+
+    <img id="myimage" onclick="changeImage(this)" src="../图标样式/pic_bulboff.gif" width="100" height="180">
+    <p>点击灯泡就可以打开或关闭这盏灯</p>
+
+
+
+    <h1>
+        JS 能够对事件作出反应。比如对按钮的点击：
+    </h1>
+    <button type="button" onclick="alert('欢迎!')">Welcome!</button>
+
+
+    <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+    <input id="number" type="text">
+    <button type="button" onclick="checkNumber()">提交</button>
+        
+
+
+    <img src="../图标样式/小小小小龟.png" alt="小龟龟" width="20px" >
+
+
+    <h1 id="text">
+    JS 能改变 HTML 元素的内容。
+    </h1>
+    <h1 id="text2">
+        JS 能改变 HTML 元素的内容。
+    </h1>
+    <button type="button" onclick="changeText()">改变文本</button>
+    
+    <button type="button" onclick="clearall()">清空页面</button>
+
+    
+  
+
+
+
+</body>
+</html>
