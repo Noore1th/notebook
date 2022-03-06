@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3D练习</title>
+    <style type="text/CSS">
+
+        #cubic{
+            margin:250px;
+            width: 800px;
+            height: 800px;
+            transform-style: preserve-3d;
+            transform: rotate3d(1, 1, 1, 30deg)
+            ;          
+        }
+
+        #cubic:hover{
+            transform: rotate3d(1, 1, 1, 1700deg);
+            transition: 30s 1s;
+            transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+            /*
+            transition-timing-function: steps(30,start);
+            */
+        
+        }
+
+        .face{
+            height: 300px;
+            width:300px;
+            opacity: 0.7;
+            position: absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #fff;
+            backface-visibility: inherit;
+        }
+
+        
+        
+        #front{
+            background-color: red;
+            transform: translateZ(50px);
+        
+        }        
+        #back{
+            background-color: orange;
+            transform: rotateY(180deg) translateZ(50px);
+
+        }
+        #right{
+            background-color: green;
+            transform: rotateY(90deg) translateZ(50px);
+        }       
+        #left{
+            background-color: yellow;
+            transform: rotateY(-90deg) translateZ(50px);
+        }              
+        #top{
+            background-color: blue;
+            transform: rotateX(90deg) translateZ(50px);
+            
+        }        
+        #bottom{
+            background-color: purple;
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section id="cubic">
+        <div class="face" id="front">1</div>
+        <div class="face" id="back">2</div>
+        <div class="face" id="right">3</div>
+        <div class="face" id="left">4</div>
+        <div class="face" id="top">5</div>
+        <div class="face" id="bottom">6</div>
+    </section>
+    
+</body>
+</html>

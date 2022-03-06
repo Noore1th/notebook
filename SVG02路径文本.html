@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="400" width="450"> 
+        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+        stroke-width="3" fill="none" />
+
+        <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+        stroke-width="3" fill="none" />
+
+        <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
+        fill="none" />
+
+        <path d="M 100 350 q 150 -300 300 0" stroke="blue"
+        stroke-width="5" fill="none" />
+
+        <!-- Mark relevant points -->
+        <g stroke="black" stroke-width="3" fill="black">
+          <circle id="pointA" cx="100" cy="350" r="3" />
+          <circle id="pointB" cx="250" cy="50" r="3" />
+          <circle id="pointC" cx="400" cy="350" r="3" />
+        </g>
+        <!-- Label the points -->
+        <g font-size="30" font="sans-serif" fill="black" stroke="none"
+        text-anchor="middle">
+          <text x="100" y="350" dx="-30">A</text>
+          <text x="250" y="50" dy="-10">B</text>
+          <text x="400" y="350" dx="30">C</text>
+        </g>
+      </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
+        <path d="M 100 0 l -100 200 L 200 150 c 400 -220 -500 -100 300 100 " style="stroke:darkred; stroke-width:3; fill:none"/>
+    </svg>
+
+
+    
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <text x="30" y="30" fill="red" transform="rotate(45 30,30)">I love SVG</text> <!--参数表示角度和锚点-->
+    </svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+        </defs>
+        <text x="10" y="100" style="fill:red;">
+            <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+        </text>
+    </svg>    
+    
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" height="200">
+
+        <defs>
+            <path id="path2" d="M 100 0 l -100 200 L 200 150 c 400 -220 -500 -100 300 100 "/>
+        </defs>
+        <text x="10" y="100" style="fill:red;">
+            <textPath xlink:href="#path2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit nemo rerum praesentium reiciendis laboriosam quae, asperiores beatae illum eos perferendis molestias obcaecati aliquam consectetur sint qui, voluptatem unde eligendi.</textPath>
+        </text>
+    </svg>  
+
+  
+    
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" height="200">
+        
+        <defs>
+            <path id="path2" d="M 100 0 l -100 200 L 200 150 c 400 -220 -500 -100 300 100 "/>
+        </defs>
+        <text x="10" y="20" style="fill:red;">
+            <tspan x="10" y="100" style="fill:red;">
+                <textPath xlink:href="#path2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit nemo rerum praesentium reiciendis laboriosam quae, asperiores beatae illum eos perferendis molestias obcaecati aliquam consectetur sint qui, voluptatem unde eligendi.</textPath>
+            </tspan> <!--tspan不支持路径-->
+        </text>
+    </svg>
+
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="200">
+        <text x="80" y="50" style="fill:red; font-size:10">ok
+          <tspan x="20" y="70" style="fill:lightblue; font-size:60px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">想</tspan>
+          <tspan x="50" y="150"style="fill:darkblue; font-size:80px; font-family:'Courier New', Courier, monospace">见</tspan>
+          <tspan x="10" y="180" style="fill:blue; font-size:50px; font-family:'Courier New', Courier, monospace" >你</tspan>
+        </text>
+      </svg>
+
+
+
+
+
+      
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <a xlink:href="http://www.w3schools.com/svg/" target="_blank">
+          <text x="0" y="15" fill="red">I love SVG</text>
+        </a>
+
+      </svg>
+
+
+
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink" height="200">
+
+        <a xlink:href="https://www.baidu.com/s?ie=UTF-8&wd=想见你" target="_blank">
+            <text x="80" y="50" style="fill:red; font-size:10">ok
+                <tspan x="20" y="70" style="fill:lightblue; font-size:60px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">想</tspan>
+                <tspan x="50" y="150"style="fill:darkblue; font-size:80px; font-family:'Courier New', Courier, monospace">见</tspan>
+                <tspan x="10" y="180" style="fill:blue; font-size:50px; font-family:'Courier New', Courier, monospace" >你</tspan>
+              </text>
+
+        </a>
+      </svg>
+
+    
+</body>
+</html>
