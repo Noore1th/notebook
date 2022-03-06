@@ -4,33 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>像素风copy</title>
+    <title>像素风-点击消失</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>   
+        $(function(){    
+     // 开始写 jQuery 代码...
+            $("#start").click(function(){
+                $("div.container").fadeIn(1000);
+            })
+    
+            $("div#hide").click(function(){
+                $(this).hide("fast");
+            }); //发生点击的单个p元素消失
+
+            $("#show").click(function(){
+                $("div").show(1000);
+
+            });
+
+    
+        });
+    
+    </script>
+
+
+
     <style>
         .container{
+            z-index: -1;
             display: grid;
-            width:300px;
+            width:330px;
             height: 300px;
             background-color:beige;
             grid-template-rows: repeat(10,1fr);
-            grid-template-columns: repeat(10,1fr);
+            grid-template-columns: repeat(11,1fr);
             grid-template-areas: 
               
-                '. . . . . g1 . . . . '
-                '. . . . g2 g2 g2 . . . '
-                '. . . g3 g3 g3 g3 g3 . . '
-                '. . g4 g4 g4 g4 g4 g4 g4 . '
-                '. . . g5 g5 g5 g5 g5 . . '
-                '. . g6 g6 g6 g6 g6 g6 g6 . '
-                '. g7 g7 g7 g7 g7 g7 g7 g7 g7 '
-                '. . g8 g8 g8 g8 g8 g8 g8 . '
-                '. . . b9 b9 b9 b9 b9 . . '
-                '. . . b10 b10 b10 b10 b10 . . '
-                
-
-               
-
-                
-                
+                '. . . . . r1 . . . . .'
+                '. . . . g2 g2 g2 . . . .'
+                '. . . g3 g3 g3 g3 g3 . . .'
+                '. . g4 g4 g4 g4 g4 g4 g4 . .'
+                '. . . g5 g5 g5 g5 g5 . . .'
+                '. . g6 g6 g6 g6 g6 g6 g6 . .'
+                '. g7 g7 g7 g7 g7 g7 g7 g7 g7 .'
+                'g8 g8 g8 g8 g8 g8 g8 g8 g8 g8 g8'
+                '. . . b9 b9 b9 b9 b9 . . .'
+                '. . . b10 b10 b10 b10 b10 . . .'
+              
             ;
         }
 
@@ -92,36 +113,28 @@
             grid-area: b10;
         }
         
-        
-
-
-
-
     </style>
 </head>
 <body>
 
-
-
-
     <div class="container">
-        <div class="darkred"></div>
+        <div id="hide" class="darkred"></div>
 
-        <div class="darkgreen1"></div>
-        <div class="darkgreen2"></div>
-        <div class="darkgreen3"></div>
-        <div class="darkgreen4"></div>
-        <div class="darkgreen5"></div>
-        <div class="darkgreen6"></div>
-        <div class="darkgreen7"></div>
-        <div class="darkgreen8"></div>
-        <div class="brown9"></div>
-        <div class="brown10"></div>
+        <div id="hide" class="darkgreen1"></div>
+        <div id="hide" class="darkgreen2"></div>
+        <div id="hide" class="darkgreen3"></div>
+        <div id="hide" class="darkgreen4"></div>
+        <div id="hide" class="darkgreen5"></div>
+        <div id="hide" class="darkgreen6"></div>
+        <div id="hide" class="darkgreen7"></div>
+        <div id="hide" class="darkgreen8"></div>
+        <div id="hide" class="brown9"></div>
+        <div id="hide" class="brown10"></div>
        
-
-
-
     </div>
+
+    <button id="show">重新开始</button>
+    <button id="start">开始</button>
 
 
 

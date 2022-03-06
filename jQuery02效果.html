@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>效果</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+
+
+
+
+    <style type="text/CSS">      
+        div.d{
+            width: 400px;
+            height: 100px;
+            display: none;
+            position: relative;
+    
+    
+        }
+        #d1{
+            margin-top: 50px;
+            background-color:darkgrey;
+            position: relative;     
+        }        
+        #d2{
+            background-color:dimgray ;
+            position: relative;
+        }        
+        #d3{
+            background-color:darkred;
+            position: relative;
+        }        
+
+
+        header{
+            display: grid;
+            width: 400px;
+            height: 50px;
+            grid-template-columns: repeat(4,1fr);
+            position: absolute;
+            top:180px;
+            text-align: center;
+        }
+        .headerTry{
+            background-color:darkred;
+            color: beige;
+        }
+        span{
+            line-height: 50px;
+        }
+
+        #person{
+            background-color: #bcbcbc;
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            top:230px;
+            left: 308px;
+            display: none;
+            
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <!--隐藏/显示-->
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button><br/>
+
+    <p>如果你点我，我就会消失。</p>
+    <p>继续点我!</p>
+    <p>接着点我!</p>
+
+
+    <!--淡入/淡出-->
+    <button id="fadeIn">查看</button>
+    <button id="fadeOut">关闭</button>
+    <button id="Tog">查看/关闭</button>
+    <button id="closeAll">全部关闭</button>
+    <br/>
+
+    <div class="d" id="d1"></div>
+    <div class="d" id="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non of quisquam, iusto minus perspiciatis itaque nihil? Obcaecati eaque sequi molestias in at quas quis doloremque!</div>
+    <div class="d"id="d3"></div>
+    <div class="d" id="d4"></div>
+
+    <!--下滑-->
+
+
+    <header>
+        <div class="headerTry"><span>首页</span></div>
+        <div class="headerTry"><span>简介</span></div>
+        <div class="headerTry"><span>服务</span></div>
+        <div id="personH" class="headerTry"><span>个人</span></div>
+    </header>
+
+    <div id="person">
+        <ol>
+            <li>查找</li>
+            <li>设置</li>
+            <li>帮助</li>
+            <li>退出</li>
+        </ol>
+    </div>
+
+
+
+
+
+
+    <script>
+        $(function(){
+
+            //<!--隐藏/显示-->
+
+            $("p").click(function(){
+            $(this).hide();
+              }); //发生点击的p元素本身消失
+
+            $("#hide").click(function(){
+                $("p").hide("slow","linear",function(){
+                alert("hide()方法已完成！");
+            });//点击id为hide的元素，所有p元素消失
+            });
+
+            $("#show").click(function(){
+            $("p").show(1000,"linear",function(){
+                alert("Show()方法已完成！");
+            });//点击id为show的元素，所有p元素出现
+            //alert会多次弹出，使用unbind也没有成功。
+            });
+
+
+
+            //<!--淡入/淡出-->
+
+            $("#fadeIn").click(function(){
+                $("#d1").fadeIn();
+                $("#d2").fadeIn("slow");
+                $("#d3").fadeIn(3000);
+
+            })
+
+            $("#fadeOut").click(function(){
+                $("#d1").fadeOut();
+                $("#d2").fadeOut("slow");
+                $("#d3").fadeOut(3000);
+            })
+
+            $("#Tog").click(function(){
+                $("#d1").fadeToggle();
+                $("#d2").fadeToggle("fast");
+                $("#d3").fadeToggle(3000);
+            })
+
+            $("#d2").mouseenter(function(){
+                $("#d1").fadeTo("slow",1);
+                $("#d2").fadeTo("slow",1);
+                $("#d3").fadeTo("slow",1);//注意别漏写第一个参数
+            })            
+            $("#d2").mouseleave(function(){
+                $("#d1").fadeTo("slow",0.5);
+                $("#d2").fadeTo("slow",0.3);
+                $("#d3").fadeTo("slow",0.8);//注意别漏写第一个参数
+            })
+
+
+
+            
+            //<!--下滑-->
+            $("#personH").mouseenter(function(){
+                $("#person").slideDown("slow");
+            })
+            $("#personH").mouseleave(function(){
+                $("#person").slideUp("slow");
+            })
+            /*合并事件
+            $("#personH").click(function(){
+                $("#person").slideToggle("slow");
+            })
+
+            */
+
+
+            //动画
+            $("#d2").dblclick(function(){
+                $("#d2").animate({left:"1000px"});
+                $("#d3").animate({bottom:"100px"});
+            })
+
+            $("#closeAll").click(function(){
+                $("header").animate({
+                    left:"1000px"
+                });
+                $("#d1,#d2,#d3").animate({
+                    height:"0.5px",
+                    width:"0.5px"
+                });
+            })
+
+
+
+            
+
+
+
+
+        })
+    </script>
+
+
+    
+</body>
+</html>
