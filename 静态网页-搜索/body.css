@@ -1,0 +1,45 @@
+/*
+栅格布局对网页的缩放最适配，可以在一开始就保证布局不会出现float不跟随滚动条的问题。
+
+但是一定要把需要停靠的元素放在高度无限的main中，否则会随父元素滚走。
+
+*/
+
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'nav nav nav nav'
+    '. main aside .'
+    'footer footer footer footer';
+    grid-template-columns:minmax(2em,20em) minmax(400px,auto) 250px  minmax(2em,20em);
+    grid-template-rows: 50px 150px minmax(800px,auto) 50px;
+
+}
+header{
+    grid-area: header;
+    background-color:lightgreen;
+    z-index: 9;
+}
+
+nav{
+    grid-area:nav;
+}
+
+main{
+    grid-area: main;
+    display:grid;
+}
+aside{
+    grid-area: aside;
+   
+}
+
+footer{
+    grid-area:footer;
+    background-color: lightcoral;
+    height: 20px;
+}

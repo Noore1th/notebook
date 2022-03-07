@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下，你就知道</title>
+
+
+    <link rel="stylesheet" type="text/CSS" href="主页.css">
+    <link rel="stylesheet" type="text/CSS" href="body.css">
+    <link rel="stylesheet" type="text/CSS" href="header.css">    
+    <link rel="stylesheet" type="text/CSS" href="nav.css">   
+    <link rel="stylesheet" type="text/CSS" href="s-top-more.css">    
+    <link rel="stylesheet" type="text/CSS" href="s-top-weather.css">    
+
+
+
+    <script src="主页.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="主页jQuer.js"></script>
+</head>
+<body>
+    <header>
+        <div class="s-top-left">
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a>
+            <a class="c-font-normal h50" href="" target="_blank">新闻</a> 
+            <a class="c-font-normal h50" href="" target="_blank" id="more">更多</a>  
+        </div>
+
+
+        <div id="moreContent" >
+        <div class="s-top-more">
+            <div class="grid-a1">
+                <img src="../图标样式/功能图标-学校/a-wangluokechengzaixianjiaoyu.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-a2">
+                <img src="../图标样式/功能图标-学校/a-xiaobaoxueshuqikan.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-a3">
+                <img src="../图标样式/功能图标-学校/a-xiaoyuanfuwufuwudating.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-b1">
+                <img src="../图标样式/功能图标-学校/bancheshike.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-b2">
+                <img src="../图标样式/功能图标-学校/bumengaikuang.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-b3">
+                <img src="../图标样式/功能图标-学校/chanxueyanhezuo.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+
+            <div class="grid-c1">
+                <img src="../图标样式/功能图标-学校/heiban.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-c2">
+                <img src="../图标样式/功能图标-学校/jiangxuejin.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-c3">
+                <img src="../图标样式/功能图标-学校/jishuzhuanyi.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>        
+            <div class="grid-d1">
+                <img src="../图标样式/功能图标-学校/kejichuangye.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-d2">
+                <img src="../图标样式/功能图标-学校/kejipingtai.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+
+            <div class="grid-d3">
+                <img src="../图标样式/功能图标-学校/kejituandui.svg" width="40px">
+                <a class="c-font-normal"href="" target="_blank">新闻</a>
+            </div>
+            
+            <div class="grid-e1">
+                <a class="c-font-normal"href="" target="_blank">查看全部</a>
+            </div>
+
+
+        </div>
+        </div>
+                    
+
+    
+        <div class="s-top-right">
+        <div class="s-top-weather-wrapper" id="weather">
+            <a class="c-font-normal h50" href="" target="_blank">
+                <span>长沙</span>
+                <img src="../图标样式/好天气/a-haotianqitaiyang.svg" width="25px">
+                <span>16℃ 良</span>
+            </a>
+        </div>
+
+        
+                        
+        <div class="s-top-set-wrapper">
+            <a class="c-font-normal h50" href="" target="_blank">设置</a></div>
+        
+        <div class="s-top-username-wrapper">
+            <a class="c-font-normal h50" href="" target="_blank">
+                <img src="../图标样式/donkey.png" width="25px">
+                <span>个人</span>
+            </a>
+        </div>  
+        
+
+        <div id="weatherContent">
+        <div class="s-top-weather" >
+            <div class="grid-wa1">
+                <span class="c-font-normal" id="today" onclick="displayDate()">获取日期</span>
+                <span class="c-font-normal" id="startTime">获取日期</span> 
+                <span class="c-font-normal" id="endTime">获取日期</span>
+            </div>
+            <div class="grid-wb1">
+                <span class="c-font-normal">今天</span><br/>
+                <img src="../图标样式/好天气/a-qingxinkongqitianqi.svg" width="40px"><br/>
+                <span class="c-font-normal">15℃</span><br/>                  
+                <span class="c-font-normal">晴</span><br/>                  
+                <span class="c-font-normal">西南风3级</span>              
+            </div>
+
+            <div class="grid-wb2">
+                <span class="c-font-normal">明天</span><br/>
+                <img src="../图标样式/好天气/a-taiyanghaotianqi.svg" width="40px" margin="px"><br/>
+                <span class="c-font-normal">15℃</span><br/>                  
+                <span class="c-font-normal">晴</span><br/>                  
+                <span class="c-font-normal">西南风3级</span>                  
+            </div>
+
+            <div class="grid-wb3">
+                <span class="c-font-normal">后天</span><br/>
+                <img src="../图标样式/好天气/a-Umbrellayusantaiyangsan.svg" width="40px"><br/>
+                <span class="c-font-normal">15℃</span><br/>                  
+                <span class="c-font-normal">晴</span><br/>                  
+                <span class="c-font-normal">西南风3级</span>  
+            </div>
+
+            <div class="grid-wb4">
+                <span class="c-font-normal">今天</span><br/>
+                <img src="../图标样式/好天气/a-wanshangtianqi.svg" width="40px"><br/>
+                <span class="c-font-normal">15℃</span><br/>                  
+                <span class="c-font-normal">晴</span><br/>                  
+                <span class="c-font-normal">西南风3级</span>                
+            </div>
+            
+            <div class="grid-wb5">
+                <span class="c-font-normal">今天</span><br/>
+                <img src="../图标样式/好天气/a-wendujiqiwentianqi.svg" width="40px"><br/>
+                <span class="c-font-normal">15℃</span><br/>                  
+                <span class="c-font-normal">晴</span><br/>                  
+                <span class="c-font-normal">西南风3级</span>                
+            </div>
+
+        </div>
+        </div>
+                
+        
+    </header>
+
+    <nav>
+        <img id="icon" src="../图标样式/百度.png" width="250px">
+       
+    </nav>
+
+
+
+<main>
+    <div class="searchbar">
+        <input type="search" id="baidu" placeholder="百度一下，你就知道"><button id="baidu-btn">百度一下</button>
+    </div>  
+
+    <section>
+        <div>
+            <a class="c-font-normal"href="" target="_blank">新闻</a>
+            <a class="c-font-normal"href="" target="_blank">新闻</a>
+            <a class="c-font-normal"href="" target="_blank">新闻</a>
+        </div>
+
+        <article class="nav-artical"> 
+            <div>
+            <a class="c-font-article" href="" target="_blank">乌克兰国内...</a><br/></div>
+            <div>
+                <iframe height="120px" width="180px" scrolling="no"src="https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_8817064320826934832%22%7D&n_type=-1&p_from=-1" sandbox="allow-top-navigation"></iframe>
+                <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+                <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe> 
+                <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe> 
+            </div>
+        </article>
+
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>
+
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>        
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>        
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>        
+        <article>
+            <iframe height="120px" width="180px" scrolling="no"src="" sandbox="allow-top-navigation"></iframe>
+            <p>
+                <a class="c-font-article" href="" target="_blank">乌克兰国内...lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium </a>
+            </p>           
+        </article>
+
+    </section>
+</main>
+
+
+<aside>
+    <div class="hot">    
+        <ol><a class="c-font-normal" href="" target="_blank">百度热搜 ></a>
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li> 
+            
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li>            
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li>            
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li>            
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li>            
+            <li class="c-font-aside"><a href="" target="_blank">长沙新热点长沙新热点</a></li>
+            
+
+        </ol>
+
+    </div>
+</aside>
+
+
+
+
+
+<footer></footer>
+
+
+
+
+
+    
+</body>
+</html>

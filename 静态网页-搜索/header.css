@@ -1,0 +1,43 @@
+        
+.c-font-normal{   
+    font-size: 0.8em;
+    text-decoration: none;       
+}
+.c-font-article{
+    font-size: 1.5em;
+    text-decoration: none; 
+}
+.c-font-aside{
+    font-size: 1em;
+    text-decoration: none; 
+}
+
+.h50{
+    display:inline-block;
+    margin: 0 10px ;
+    line-height: 50px; 
+}
+
+
+a.c-font-normal:hover{
+    color:blue;
+}
+
+
+.s-top-left {
+    width:420px;
+    height: 50px;
+    float:left;
+
+    box-sizing: border-box;    
+}
+
+.s-top-right {
+    width:250px;
+    height: 50px;
+    float:right;
+
+    box-sizing: border-box;   
+}
+
+
