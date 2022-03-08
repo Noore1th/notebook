@@ -1,0 +1,46 @@
+#icon{
+    margin: auto;
+    position:relative;
+    left:35%;
+
+}
+
+
+div.searchbar{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin:auto;
+    max-width:110vh;
+    width:130%;
+    height: 45px;
+    position:sticky;
+    top:0;
+    left:50%;
+}
+
+#baidu{
+    display: block;
+    margin:auto;           
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border:2px solid rgba(66, 83, 238, 0.555);
+    border-radius: 10px 0 0 10px ; 
+    font-size: 19px;
+}
+
+#baidu:focus{
+    outline:none;
+}
+
+
+#baidu-btn{
+    background-color:rgba(66, 83, 238, 0.555);
+    font-size: 19px;
+    border-radius:0 10px 10px 0; 
+    border:0;
+}
+#baidu-btn:hover{
+    background-color:rgba(66, 83, 238, 0.8);
+    
+}
