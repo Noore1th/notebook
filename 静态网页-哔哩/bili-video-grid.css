@@ -1,0 +1,36 @@
+.layout-part1{
+    margin-bottom:24px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    position: relative;
+    width:100%;
+    grid-gap:20px 12px;
+}
+.video-grid{
+    display: grid;
+    grid-column-start: span 5;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-end: auto;
+    position: relative;
+    width:100%;
+    grid-gap:20px 12px;
+}
+
+.recommend-swipe{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: blue;
+}
+
+.video-card{
+    position: relative;
+    background-color: pink;
+}
+
+.video-cover{
+    padding-top: 56.25%;
+    border-radius: 6px;
+    background-color: var(--graph_bg_regular);
+}
