@@ -1,0 +1,105 @@
+.header-channel{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: darkseagreen;
+    padding: 0 56px;
+    position: relative;
+    width: 100%;
+    max-width: 2078px;
+    margin:0 auto;
+    box-sizing: border-box;
+    
+}
+
+.channel-icon{
+    margin-right: 4px;
+    z-index: 0;
+    display: flex;
+    text-align: center;
+}
+
+.channel-icon > .channel-icon-item{
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color:darkslategray;
+    
+}
+
+.channel-icon > .channel-icon-item > .icon-pic{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #ff9212;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.channel-icon > .channel-icon-item > .icon-pic:hover{
+    background-color: beige;
+    opacity: 0.7;
+}
+
+.channel-icon > .channel-icon-item > .icon-pic > .rac-icon{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.channel-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-left{
+    padding-right: 20px;
+    grid-template-columns: repeat(9,1fr);
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-column: span 4;
+    grid-gap: 10px;
+    grid-template-rows: repeat(2,1fr);
+    border-right: 1px solid var(--line_regular);
+}
+
+.items-left > a{
+    display: inline-block;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #bcbcbc;
+    border-radius: 6px;
+    background-color:beige;
+    color:darkslategray;
+    text-align: center;
+    font-weight: 400;
+    transition-property: background-color, color;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s
+}
+
+.items-left > a:hover{
+    background-color: darkgrey;
+}
+
+.items-right{
+    width: 168px;
+    grid-column: span 1;
+    grid-row-gap: 10px;
+    grid-auto-flow: column;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    width: 168px;
+    flex-shrink: 0;
+}

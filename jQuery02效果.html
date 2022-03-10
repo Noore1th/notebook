@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery02效果</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="jQuery02效果.js"></script>
+
+
+    <style type="text/CSS">
+    body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    .wrapper{
+        min-height: 720px;
+        height: 100%;
+        width: 100%;
+        background-color: #bcbcbc;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+    
+    .left-entry{
+        min-height: 700px;
+        height: 100%;
+        width: 150px;
+        background-color: aquamarine;
+        position: relative;
+    }
+    .left-btn{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .left-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        position:absolute;
+        bottom:0;
+    }
+
+    .reader-layout{
+        min-height: 700px;
+        height: 100%;
+        width: 800px;
+        background-color:floralwhite;
+        position: relative;
+    }
+
+    .tool{
+        width: 60%;
+        height: 30px;
+        position: absolute;
+        top:0px;    
+        display: flex;
+        text-align: center;
+        background-color: dodgerblue;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    .tool-btn{
+        margin-right: 15px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .headerTry{
+        background-color:darkred;
+        color: beige;
+    }
+    span{
+        line-height: 50px;
+    }
+
+    #person{
+        background-color: #bcbcbc;
+        width: 100px;
+        height: 200px;
+        position: relative;
+        top:10px;
+        right: 50px;
+        display: none;
+        
+    }
+
+    .right-layout{
+        min-height: 700px;
+        height: 100%;
+        width: 200px;
+        background-color:antiquewhite;
+        position: relative;
+    }
+
+    
+    div.d{
+        width: 150px;
+        height: 30px;
+        /* display: none; */
+        position: relative;
+        overflow: hidden;
+        z-index: 99;
+
+
+    }
+    #d1{
+        background-color:darkgrey;
+        position: relative;     
+    }        
+    #d2{
+        background-color:dimgray ;
+        position: relative;
+    }        
+    #d3{
+        background-color:darkred;
+        position: relative;
+    }
+ 
+
+  
+    .chp1{
+        margin-top: 70px;
+    }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="left-entry">
+            <div class="left-btn">
+                <!--淡入/淡出-->
+                <button id="fadeIn">查看</button>
+                <button id="fadeOut">关闭</button>
+                <button id="Tog">查看/关闭</button>
+                <button id="closeAll">全部关闭</button>
+                <br />
+                <!--隐藏/显示-->
+                <button id="hide">隐藏</button>
+                <button id="show">显示</button><br />
+            </div>
+
+            <div class="left-title">
+                <div class="d" id="d1"></div>
+                <div class="d" id="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofquisquam, iusto minus perspiciatis itaque nihil? Obcaecati eaque sequi molestias in at quas quis doloremque!>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofLorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofquisquam, iusto minus perspiciatis itaque nihil? Obcaecati eaque sequi molestias in at quas quis doloremque!>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofLorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofquisquam, iusto minus perspiciatis itaque nihil? Obcaecati eaque sequi molestias in at quas quis doloremque!>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofLorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non ofquisquam, iusto minus perspiciatis itaque nihil? Obcaecati eaque sequi molestias in at quas quis doloremque!>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, laudantium? officia non of
+
+                </div>
+                <div class="d" id="d3"></div>
+            
+            </div>
+
+            
+        </div>
+
+
+        <div class="reader-layout">
+
+
+
+
+        </div>
+
+        <div class="right-layout">
+            <header class="right-tool">
+                <ul class="tool">
+                    <li class="tool-btn">首页</li>
+                    <li class="tool-btn"> 首页</li>
+                    <li class="tool-btn"> 首页</li>
+                    <li class="tool-btn"> 首页</li>
+                    <li class="tool-btn"> 首页</li>
+                    <li id="personH" class="headerTry">个人
+                        <div id="person">
+                            <ol>
+                                <li>查找</li>
+                                <li>设置</li>
+                                <li>帮助</li>
+                                <li>退出</li>
+                            </ol>
+                        </div>                      
+                    </li>
+                </ul>
+            </header>
+
+
+            <div class="chp1">
+                <p>如果你点我，我就会消失。</p>
+                <p>继续点我!</p>
+                <p>接着点我!</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+</body>
+
+</html>
