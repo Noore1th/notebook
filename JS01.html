@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS01修改、检测、响应</title>
+    <script src="JS0102修改.js"></script>
+    <script src="JS0103检测、响应.js"></script>
+    <script src="JS0104输出.js"></script>
+    
+    <style>
+        div{
+            display: inline-block;
+            vertical-align: top;
+            
+        }
+
+        meter{
+            display: inline-block;
+            width:200px;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <!-- JavaScript 是一种轻量级的编程语言。 -->
+    <!--    JS 能够直接写入 HTML 输出流中 -->
+
+    <!-- 太神奇了，不用var申明变量，甚至不创建变量x，都能运行成功 -->
+    <!-- S是在获取了要素空间的下一行直接传递值吗？ -->
+
+        <p id="textP2">【尝试在载入时修改】</p>
+        <script src="JS0101加载.js"></script><!-- 在哪插入就在那显示，需要参数的方法（如修改），只能把在其后插入，才能修改成功 -->
+
+
+    
+    <div style="
+    background-color: forestgreen;">
+        <p id="textP">【支持各种文本写入和修改样式】</p>
+        <div>
+            
+            <button type="button" onclick="displayDate()">显示日期</button><br>
+            <button type="button" onclick="changeColorBtn(),changeSelfColor(this)" >修改日期样式</button><br>
+            <button type="button" onclick="welcome()" >欢迎</button><br>
+            <button type="button" onclick="welcome2()" >欢迎</button>
+            <button type="button" onclick="clearall()">清空页面</button>
+        </div>   
+
+        <div> 
+            <!-- 都能执行，但效果不同 -->
+            <p>修改value测试：</p>
+            <meter value="0.6" onclick="changeMeter(this)">60%</meter><br>
+            <meter value="5" min="0" max="10" onclick="changeMeter(this)">2 out of 10</meter>
+        </div>
+        
+
+        <div>
+            <img id="myimage" onclick="changeImage(this)" src="../素材/图标样式/pic_bulboff.gif" width="50" height="60">
+            <p>修改src测试：点击灯泡</p>
+        </div>
+    </div>
+
+
+    <div style="background-color:lightgreen;">
+
+        <p>JS 能够对事件作出反应。比如对按钮的点击：</p>
+
+        <button type="button" onclick="alert('欢迎!')">Welcome!</button>
+        
+        <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+        <input id="myinputnumber" type="text">
+        <button type="button" onclick="checkNumber()">提交</button>
+    </div>      
+
+    <div style="background-color:beige;">
+        <div>
+            <p id="number">number</p>
+            <p id="text">text</p>
+            <p id="calculate">calculate</p>
+        </div> 
+        
+        <div>
+            <p id="x2">x2</p>
+            <p id="ageA">ageA</p>
+            <p id="countResult">countResult</p>
+            <p id="odd1">odd1</p>
+            <p onclick="multi('100','99')" id="mult1">计算100*99=</p>
+
+        </div>
+
+    </div>
+
+    <!-- 不用函数调用元素，而直接写执行代码的JS，都需要放在元素出现的后面，才能执行 -->
+    <script src="JS0104输出.js"></script>
+    
+
+
+
+</body>
+</html>

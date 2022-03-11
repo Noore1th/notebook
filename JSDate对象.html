@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS对象</title>
+    <script src="JSDate对象.js"></script>
+    <style>
+        .clock{
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body onload="startTime()">
+
+    <div id="myYear">【年份】</div>    
+    <button onclick="showYear()">年份</button>
+
+    <div id="my1970">【1970至今多少毫秒】</div>
+    <button onclick="time1970()">1970</button>
+  
+    <div id="setYear1">【重设详细时间】</div>
+    <button onclick="setYear()">时间</button>
+  
+    <div id="timeUTC1">【UTC时间】</div>
+    <button onclick="timeUTC()">时间</button>
+  
+    <div id="timeWeek1">【星期】</div>
+    <button onclick="timeWeek()">星期</button>
+  
+    <div id="dateType1">【日期格式】</div>
+    <div id="dateType2">【日期格式】</div>
+    <div id="dateType3">【日期格式】</div>
+    <div id="dateType4">【日期格式】</div>
+    <button onclick="dateType()">日期</button>
+
+    <button onclick="checkDate2()">查看是否到达日期</button>
+    <button onclick="checkDate()">查看本月还有几天</button>
+    <button onclick="checkDate1()">查看下周（今天）的日期</button>    
+    
+
+    
+    <div class="clock" id="myClock">【钟表】</div>
+    
+</body>
+</html>
