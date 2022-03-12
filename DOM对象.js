@@ -52,10 +52,18 @@ function myFunction06(a, b){
     document.getElementById("textP4").innerHTML = result;
 }
 
+
+//移除事件
 document.addEventListener("click",function(){
     document.body.style.backgroundColor = "green";
 })
 
-
+document.addEventListener("mousemove",myFunction07);
+function myFunction07() {
+    document.getElementById("textP5").innerHTML = Math.random();
+}
+function removeHandler(){
+    document.removeEventListener("mousemove",myFunction07)
+}
 
 
