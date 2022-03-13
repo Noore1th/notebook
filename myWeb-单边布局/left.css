@@ -1,0 +1,28 @@
+
+.blog-part{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border-right: 1px solid #94918f; /* 单边位置 */
+}
+
+/* .blog-part:not(:last-child){
+    border-right: 1px solid #94918f;
+} */
+
+
+.blog-menu{
+    font-size: 1.6vm;
+    text-decoration: none;
+    color: #161419;
+    display: flex;
+    letter-spacing: -0.5px;
+    align-items: center;
+    margin-top: 24px;
+}
+.mention{
+    margin-top: auto;/* 弹性盒巧用auto拉开布局 */
+}
+.subscribe{
+    margin-top: 8px;
+}
