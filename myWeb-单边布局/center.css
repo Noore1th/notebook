@@ -1,0 +1,38 @@
+.blog-header{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 大小标题在下个part中被复用 */
+.blog-big__title{
+    font-size: 132px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.small-title {
+    border-bottom: 1px solid #94918f;/* 单边位置 */
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.blog-article{
+    padding: 0 20px;
+}
+
+.page-number{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 72px;
+    text-align: center;
+    letter-spacing: -3px;
+    font-weight: lighter;
+    font-family: "Space Grotesk", sans-serif;
+    border-right: 1px solid #94918f;/* 单边位置 */
+    white-space: nowrap;
+}
