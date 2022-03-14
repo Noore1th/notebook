@@ -1,0 +1,123 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 30px;/* 与header对齐 */
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.main-header {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #1f1d2b 0%, #1f1d2b 78%, rgba(31, 29, 43, 0) 100%); /* 底部设置了颜色的过渡效果，两个模块的交界处更加柔和 */
+    z-index: 11;
+}
+
+.main-blogs {
+    display: flex;
+    align-items: center;
+}
+
+.main-blog {
+    background-image: url(https://assets.codepen.io/3364143/skate-removebg-preview.png);
+    background-size: 80%;
+    background-position-x: 150px;
+    background-color: #31abbd;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 30px;
+    border-radius: 20px;
+    align-self: stretch;
+    overflow: hidden;
+    position: relative;
+    /* transition: background 0.3s; 设置动画效果，改成2秒感觉更柔和*/
+    transition-property: background;/* 是什么决定了图片的水平移动？ */
+    transition-duration: 5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background-repeat: no-repeat;
+}
+.main-blog__title {
+    font-size: 25px;
+    max-width: 12ch;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.main-blog__author {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+/* 复合头像外框，设置position,让内部的position生效*/
+.author-img__wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+.author-img__wrapper svg {
+    width: 16px;
+    padding: 2px;
+    background-color: #fff;
+    color: #0daabc;
+    border-radius: 50%;
+    border: 2px solid #0daabc;
+    position: absolute;
+    bottom: 5px;/* 左下角角标位置 */
+    right: 0;
+}
+.author-img {
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 4px;
+    border-radius: 50%;
+    object-fit: cover;/* 对图片进行剪切，保留原始比例, 默认为不保证保持原有的比例，内容拉伸填充整个内容容器。*/
+}
+
+.author-detail {
+    margin-left: 16px;
+}
+
+.author-name {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.author-info {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+}
+/* 用span放置一个小圆点，用于分隔 */
+.seperate {
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 6px;
+}
+
+
+.main-blog__time {
+    background: rgba(21, 13, 13, 0.44);
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;/* 标注型信息，放置左下角 */
+}
