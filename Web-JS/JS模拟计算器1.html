@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>最 简单计算器 路口师傅</title>
+</head>
+
+<style>
+    table,tr,td{
+         border:1px solid blue; 
+         width:300px;
+         height: 50px;
+         
+    }
+    #ok,.td,#clear,#last{
+        text-align:center;
+    }
+</style>
+
+<body>
+	
+  <table>
+    <tr>
+    	<td colspan="5" id="show">0</td>
+    </tr>
+    <tr>
+        <td class="td" id="zero">0</td>
+      <td class="td">.</td>
+      <td id="last"><</td>
+      <td id="clear" colspan="2">c</td>
+    </tr>
+    <tr>
+    	<td class="td">1</td>
+      <td class="td">2</td>
+      <td class="td">3</td>
+      <td class="td">+</td>
+      <td class="td">-</td>
+    </tr>
+    <tr>
+    	<td class="td">4</td>
+      <td class="td">5</td>
+      <td class="td">6</td>
+      <td class="td">*</td>
+      <td class="td">/</td>
+    </tr>
+    <tr>
+    	<td class="td">7</td>
+      <td class="td">8</td>
+      <td class="td">9</td>
+      <td id="ok" colspan="2">=</td>
+    </tr>
+  </table>
+
+  <button onclick="alert(oTd[1].innerHTML)">测试按钮</button><!-- 经测试发现这个类数组元素通过这种方式可以按顺序访问-->
+
+  <script>
+        var oTd = document.getElementsByClassName("td");
+/*         HTMLCollection(15) [td#zero.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, td.td, zero: td#zero.td] 为获取到的类数组对象，如果同时还有id，会在末尾创建类字典元素*/
+
+      var oK = document.getElementById("ok");
+        var oShow = document.getElementById("show");
+        var oClear = document.getElementById("clear");
+        var run = '';//全局变量 公式
+
+        oK.onclick=function(){
+            if(run!==""){
+                oShow.innerHTML = eval(run);
+            }
+            if(oShow.innerHTML!=="0"){
+                run = show.innerHTML;
+            }
+        }
+
+        oClear.onclick=function(){
+            run = '';
+            show.innerHTML = '0';
+        }
+
+        for(var i = 0;i<=oTd.length;i++){
+            oTd[i].index = i;
+            oTd[i].onclick=function(){
+                /* alert(oTd[oTd.index].innerHTML) */
+                alert(oTd[this.index].innerHTML) 
+                run += oTd[this.index].innerHTML;//每次点击的数字或运算符，就用+=添加到run后面
+                oShow.innerHTML = run;//并写入show对象
+            };
+        }
+  </script>
+</body>
+</html>

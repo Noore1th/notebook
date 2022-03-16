@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            width: 400px;
+            height:400px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-template-areas: ' x1 x2 x3 x4' 'x5 x6 x7 x8' 'x9 x10 x11 x12' 'x13 x14 x15 x16';
+            outline: 2px solid black;
+        }
+
+
+        .tu{
+            position: relative;
+            width:100px;
+            height:100px;
+            overflow: hidden;
+            outline: 2px solid black;        
+        }
+
+ 
+        .x-1{position: absolute;top:0;left:0;} 
+        .x-2{position: absolute;top:0;left:-100%;} 
+        .x-3{position: absolute;top:0;left:-200%;} 
+        .x-4{position: absolute;top:0;left:-300%;} 
+        .x-5{position: absolute;top:-100%;left:0;} 
+        .x-6{position: absolute;top:-100%;left:-100%;} 
+        .x-7{position: absolute;top:-100%;left:-200%;} 
+        .x-8{position: absolute;top:-100%;left:-300%;} 
+        .x-9{position: absolute;top:-200%;left:0;} 
+        .x-10{position: absolute;top:-200%;left:-100%;} 
+        .x-11{position: absolute;top:-200%;left:-200%;} 
+        .x-12{position: absolute;top:-200%;left:-300%;}        
+        .x-13{position: absolute;top:-300%;left:0;} 
+        .x-14{position: absolute;top:-300%;left:-100%;} 
+        .x-15{position: absolute;top:-300%;left:-200%;} 
+        .x-16{position: absolute;top:-300%;left:-300%;} 
+
+        #f-1{grid-area:x1;}
+        #f-2{grid-area:x2;}
+        #f-3{grid-area:x3;}
+        #f-4{grid-area:x4;}
+        #f-5{grid-area:x5;}
+        #f-6{grid-area:x6;}
+        #f-7{grid-area:x7;}
+        #f-8{grid-area:x8;}
+        #f-9{grid-area:x9;}
+        #f-10{grid-area:x10;}
+        #f-11{grid-area:x11;}
+        #f-12{grid-area:x12;}
+        #f-13{grid-area:x13;}
+        #f-14{grid-area:x14;}
+        #f-15{grid-area:x15;}
+        #f-16{grid-area:x16;}
+ 
+ 
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div id="f-1" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-1" ><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-1"></div>
+        </div>
+
+        <div id="f-2" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-2"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-2"></div>
+       </div>
+
+        <div id="f-3" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-3"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-3"></div>
+        </div>
+
+        <div id="f-4" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-4"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-4"></div>
+        </div>
+
+        <div id="f-5" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-5"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-5"></div>
+        </div>
+
+        <div id="f-6" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-6"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-6"></div>
+        </div>
+
+        <div id="f-7" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-7"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-7"></div>
+        </div>
+
+        <div id="f-8" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-8"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-8"></div>
+        </div>
+
+        <div id="f-9" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-9"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-9"></div>
+        </div>
+
+        <div id="f-10" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-10"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-10"></div>
+        </div>
+
+        <div id="f-11" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-11"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-11"></div>
+        </div>
+
+        <div id="f-12" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-12"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-12"></div> 
+        </div>
+
+        <div id="f-13" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-13"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-13"></div>
+        </div>
+
+        <div id="f-14" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-14"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-14"></div>
+        </div>
+
+        <div id="f-15" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-15"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-15"></div> 
+        </div>
+
+        <div id="f-16" ondragover="over(event)" ondrop="drop(event)">
+            <div class="tu" draggable="true" ondragstart="drag(event)" id="z-16"><img src="../素材/album一刻相册/1646498196778.jpeg" width="400%" height="400%" class="x-16"></div> 
+        </div>       
+            
+
+
+    </div>
+</body>
+</html>
