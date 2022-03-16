@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jQuery05遍历.js"></script>
+    <style>
+        .ancestors *
+        { 
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+        }
+    </style>
+</head>
+
+<body class="ancestors">body (曾曾祖父元素)
+    <div style="width:500px;">div (曾祖父元素)
+      <ul class="ul1">ul (祖父元素)  
+        <li>li (父元素)
+          <span id="span1">span</span>
+          <span id="span1">span</span>
+        </li>
+      </ul>   
+    </div>    
+    
+    
+    <div style="width:500px;">div (曾祖父元素)
+      <ul>ul (祖父元素)  
+        <li>li (父元素)
+          <span id="span2">span<span id="span2">span</span></span>
+          <span id="span2">span</span>
+        </li>
+      </ul>   
+    </div>
+
+    <div style="width:500px;">div (曾祖父元素)
+      <ul>ul (祖父元素)  
+        <li>li (父元素)
+          <span id="span3">span</span>
+          <span id="span3">span</span>
+          <span id="span3">span</span>
+        </li>
+      </ul>   
+    </div>
+
+
+
+  </body>
+
+
+</html>
