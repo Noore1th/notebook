@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>第一个 ECharts 实例</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:700px;"></div>
+
+    <script type="text/javascript">
+
+ 
+        import * as echarts from 'echarts/core';
+import { CanvasRenderer } from 'echarts/renderers';
+import { Lines3DChart } from 'echarts-gl/charts';
+import { GlobeComponent } from 'echarts-gl/components';
+
+echarts.use([GlobeComponent, Lines3DChart, CanvasRenderer]);
+
+var ROOT_PATH =
+  'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
+
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+$.getJSON(ROOT_PATH + '/data-gl/asset/data/flights.json', function (data) {
+  function getAirportCoord(idx) {
+    return [data.airports[idx][3], data.airports[idx][4]];
+  }
+  var routes = data.routes.map(function (airline) {
+    return [getAirportCoord(airline[1]), getAirportCoord(airline[2])];
+  });
+  myChart.setOption({
+    backgroundColor: '#000',
+    globe: {
+      baseTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+      heightTexture:
+        ROOT_PATH + '/data-gl/asset/bathymetry_bw_composite_4k.jpg',
+      shading: 'lambert',
+      light: {
+        ambient: {
+          intensity: 0.4
+        },
+        main: {
+          intensity: 0.4
+        }
+      },
+      viewControl: {
+        autoRotate: false
+      }
+    },
+    series: {
+      type: 'lines3D',
+      coordinateSystem: 'globe',
+      blendMode: 'lighter',
+      lineStyle: {
+        width: 1,
+        color: 'rgb(50, 50, 150)',
+        opacity: 0.1
+      },
+      data: routes
+    }
+  });
+});
+
+option && myChart.setOption(option);
+
+    </script>
+</body>
+</html>
