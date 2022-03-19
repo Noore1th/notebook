@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkcnXPAr1Lwrw3FmifRlPHfXoW9FOYxbA&sensor=TRUE"></script>
+<!--     The sensor 参数是必须的，该参数用于指明应用程序是否使用一个传感器 (类似 GPS 导航) 来定位用户的位置。参数值可以设置为 true 或者 false。 -->
+    <script>
+
+        //新建一个点
+        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
+        //初始化地图
+        function initialize()
+        {
+        var mapProp = {
+        center: myCenter,
+        zoom:5,
+        mapTypeId: google.maps.MapTypeId.RODEMAP
+        };
+
+        //把地图载入div
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        //新建一个maker，并设置位置
+        var marker = new google.maps.Marker({
+        position: myCenter,
+        title:'Click to zoom'
+        });
+
+        marker.setMap(map);
+
+
+        // Zoom to 9 when clicking on marker
+        //添加事件
+        google.maps.event.addListener(marker,'click',function() {
+        map.setZoom(9);
+        map.setCenter(marker.getPosition());
+        });
+        }
+        //对事件处理结果可视化
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+    </script>
+</head>
+<body>
+    <div id="googleMap" style="width:500px;height:500px;"></div>
+    
+</body>
+</html>
